@@ -1,0 +1,1366 @@
+ARM GAS  /tmp/ccWHBv4Z.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"hx711.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.hx711_init,"ax",%progbits
+  16              		.align	1
+  17              		.global	hx711_init
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	hx711_init:
+  25              	.LVL0:
+  26              	.LFB65:
+  27              		.file 1 "Core/common/drivers/hx711.c"
+   1:Core/common/drivers/hx711.c **** /*
+   2:Core/common/drivers/hx711.c ****  * HX711.c
+   3:Core/common/drivers/hx711.c ****  *
+   4:Core/common/drivers/hx711.c ****  *  Created on: 16 nov. 2021
+   5:Core/common/drivers/hx711.c ****  *      Author: PCov3r
+   6:Core/common/drivers/hx711.c ****  */
+   7:Core/common/drivers/hx711.c **** 
+   8:Core/common/drivers/hx711.c **** #include "hx711.h"
+   9:Core/common/drivers/hx711.c **** 
+  10:Core/common/drivers/hx711.c **** //#############################################################################################
+  11:Core/common/drivers/hx711.c **** void hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_TypeDef *dat_gpio, u
+  28              		.loc 1 11 116 view -0
+  29              		.cfi_startproc
+  30              		@ args = 4, pretend = 0, frame = 16
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 11 116 is_stmt 0 view .LVU1
+  33 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 24
+  36              		.cfi_offset 4, -24
+  37              		.cfi_offset 5, -20
+  38              		.cfi_offset 6, -16
+  39              		.cfi_offset 7, -12
+  40              		.cfi_offset 8, -8
+  41              		.cfi_offset 14, -4
+  42 0004 84B0     		sub	sp, sp, #16
+  43              	.LCFI1:
+  44              		.cfi_def_cfa_offset 40
+  45 0006 8446     		mov	ip, r0
+  46 0008 0846     		mov	r0, r1
+  47              	.LVL1:
+ARM GAS  /tmp/ccWHBv4Z.s 			page 2
+
+
+  48              		.loc 1 11 116 view .LVU2
+  49 000a 1D46     		mov	r5, r3
+  50 000c BDF82860 		ldrh	r6, [sp, #40]
+  12:Core/common/drivers/hx711.c ****   // Setup the pin connections with the STM Board
+  13:Core/common/drivers/hx711.c ****   hx711->clk_gpio = clk_gpio;
+  51              		.loc 1 13 3 is_stmt 1 view .LVU3
+  52              		.loc 1 13 19 is_stmt 0 view .LVU4
+  53 0010 CCF80010 		str	r1, [ip]
+  14:Core/common/drivers/hx711.c ****   hx711->clk_pin = clk_pin;
+  54              		.loc 1 14 3 is_stmt 1 view .LVU5
+  55              		.loc 1 14 18 is_stmt 0 view .LVU6
+  56 0014 ACF80820 		strh	r2, [ip, #8]	@ movhi
+  15:Core/common/drivers/hx711.c ****   hx711->dat_gpio = dat_gpio;
+  57              		.loc 1 15 3 is_stmt 1 view .LVU7
+  58              		.loc 1 15 19 is_stmt 0 view .LVU8
+  59 0018 CCF80430 		str	r3, [ip, #4]
+  16:Core/common/drivers/hx711.c ****   hx711->dat_pin = dat_pin;
+  60              		.loc 1 16 3 is_stmt 1 view .LVU9
+  61              		.loc 1 16 18 is_stmt 0 view .LVU10
+  62 001c ACF80A60 		strh	r6, [ip, #10]	@ movhi
+  17:Core/common/drivers/hx711.c **** 
+  18:Core/common/drivers/hx711.c ****   GPIO_InitTypeDef  gpio = {0};
+  63              		.loc 1 18 3 is_stmt 1 view .LVU11
+  64              		.loc 1 18 21 is_stmt 0 view .LVU12
+  65 0020 0024     		movs	r4, #0
+  66 0022 0094     		str	r4, [sp]
+  67 0024 0194     		str	r4, [sp, #4]
+  68 0026 0294     		str	r4, [sp, #8]
+  69 0028 0394     		str	r4, [sp, #12]
+  19:Core/common/drivers/hx711.c ****   gpio.Mode = GPIO_MODE_OUTPUT_PP;
+  70              		.loc 1 19 3 is_stmt 1 view .LVU13
+  71              		.loc 1 19 13 is_stmt 0 view .LVU14
+  72 002a 4FF00108 		mov	r8, #1
+  73 002e CDF80480 		str	r8, [sp, #4]
+  20:Core/common/drivers/hx711.c ****   gpio.Pull = GPIO_NOPULL;
+  74              		.loc 1 20 3 is_stmt 1 view .LVU15
+  21:Core/common/drivers/hx711.c ****   gpio.Speed = GPIO_SPEED_FREQ_HIGH;
+  75              		.loc 1 21 3 view .LVU16
+  76              		.loc 1 21 14 is_stmt 0 view .LVU17
+  77 0032 0327     		movs	r7, #3
+  78 0034 0397     		str	r7, [sp, #12]
+  22:Core/common/drivers/hx711.c ****   gpio.Pin = clk_pin;
+  79              		.loc 1 22 3 is_stmt 1 view .LVU18
+  80              		.loc 1 22 12 is_stmt 0 view .LVU19
+  81 0036 0092     		str	r2, [sp]
+  23:Core/common/drivers/hx711.c ****   HAL_GPIO_Init(clk_gpio, &gpio);
+  82              		.loc 1 23 3 is_stmt 1 view .LVU20
+  83 0038 6946     		mov	r1, sp
+  84              	.LVL2:
+  85              		.loc 1 23 3 is_stmt 0 view .LVU21
+  86 003a FFF7FEFF 		bl	HAL_GPIO_Init
+  87              	.LVL3:
+  24:Core/common/drivers/hx711.c ****   gpio.Mode = GPIO_MODE_INPUT;
+  88              		.loc 1 24 3 is_stmt 1 view .LVU22
+  89              		.loc 1 24 13 is_stmt 0 view .LVU23
+  90 003e 0194     		str	r4, [sp, #4]
+  25:Core/common/drivers/hx711.c ****   gpio.Pull = GPIO_PULLUP;
+ARM GAS  /tmp/ccWHBv4Z.s 			page 3
+
+
+  91              		.loc 1 25 3 is_stmt 1 view .LVU24
+  92              		.loc 1 25 13 is_stmt 0 view .LVU25
+  93 0040 CDF80880 		str	r8, [sp, #8]
+  26:Core/common/drivers/hx711.c ****   gpio.Speed = GPIO_SPEED_FREQ_HIGH;
+  94              		.loc 1 26 3 is_stmt 1 view .LVU26
+  95              		.loc 1 26 14 is_stmt 0 view .LVU27
+  96 0044 0397     		str	r7, [sp, #12]
+  27:Core/common/drivers/hx711.c ****   gpio.Pin = dat_pin;
+  97              		.loc 1 27 3 is_stmt 1 view .LVU28
+  98              		.loc 1 27 12 is_stmt 0 view .LVU29
+  99 0046 0096     		str	r6, [sp]
+  28:Core/common/drivers/hx711.c ****   HAL_GPIO_Init(dat_gpio, &gpio);
+ 100              		.loc 1 28 3 is_stmt 1 view .LVU30
+ 101 0048 6946     		mov	r1, sp
+ 102 004a 2846     		mov	r0, r5
+ 103 004c FFF7FEFF 		bl	HAL_GPIO_Init
+ 104              	.LVL4:
+  29:Core/common/drivers/hx711.c **** 
+  30:Core/common/drivers/hx711.c **** }
+ 105              		.loc 1 30 1 is_stmt 0 view .LVU31
+ 106 0050 04B0     		add	sp, sp, #16
+ 107              	.LCFI2:
+ 108              		.cfi_def_cfa_offset 24
+ 109              		@ sp needed
+ 110 0052 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 111              		.loc 1 30 1 view .LVU32
+ 112              		.cfi_endproc
+ 113              	.LFE65:
+ 115              		.section	.text.set_scale,"ax",%progbits
+ 116              		.align	1
+ 117              		.global	set_scale
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu softvfp
+ 123              	set_scale:
+ 124              	.LVL5:
+ 125              	.LFB66:
+  31:Core/common/drivers/hx711.c **** 
+  32:Core/common/drivers/hx711.c **** //#############################################################################################
+  33:Core/common/drivers/hx711.c **** void set_scale(hx711_t *hx711, float Ascale, float Bscale){
+ 126              		.loc 1 33 59 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		@ link register save eliminated.
+  34:Core/common/drivers/hx711.c ****   // Set the scale. To calibrate the cell, run the program with a scale of 1, call the tare functio
+  35:Core/common/drivers/hx711.c ****   // Divide the obtained weight by the real weight. The result is the parameter to pass to scale
+  36:Core/common/drivers/hx711.c **** 	hx711->Ascale = Ascale;
+ 131              		.loc 1 36 2 view .LVU34
+ 132              		.loc 1 36 16 is_stmt 0 view .LVU35
+ 133 0000 0161     		str	r1, [r0, #16]	@ float
+  37:Core/common/drivers/hx711.c **** 	hx711->Bscale = Bscale;
+ 134              		.loc 1 37 2 is_stmt 1 view .LVU36
+ 135              		.loc 1 37 16 is_stmt 0 view .LVU37
+ 136 0002 C261     		str	r2, [r0, #28]	@ float
+  38:Core/common/drivers/hx711.c **** }
+ARM GAS  /tmp/ccWHBv4Z.s 			page 4
+
+
+ 137              		.loc 1 38 1 view .LVU38
+ 138 0004 7047     		bx	lr
+ 139              		.cfi_endproc
+ 140              	.LFE66:
+ 142              		.section	.text.set_gain,"ax",%progbits
+ 143              		.align	1
+ 144              		.global	set_gain
+ 145              		.syntax unified
+ 146              		.thumb
+ 147              		.thumb_func
+ 148              		.fpu softvfp
+ 150              	set_gain:
+ 151              	.LVL6:
+ 152              	.LFB67:
+  39:Core/common/drivers/hx711.c **** 
+  40:Core/common/drivers/hx711.c **** //#############################################################################################
+  41:Core/common/drivers/hx711.c **** void set_gain(hx711_t *hx711, uint8_t Again, uint8_t Bgain){
+ 153              		.loc 1 41 60 is_stmt 1 view -0
+ 154              		.cfi_startproc
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157              		@ link register save eliminated.
+  42:Core/common/drivers/hx711.c ****   // Define A channel's gain
+  43:Core/common/drivers/hx711.c **** 	switch (Again) {
+ 158              		.loc 1 43 2 view .LVU40
+ 159 0000 4029     		cmp	r1, #64
+ 160 0002 07D0     		beq	.L5
+ 161 0004 8029     		cmp	r1, #128
+ 162 0006 01D1     		bne	.L6
+  44:Core/common/drivers/hx711.c **** 			case 128:		// channel A, gain factor 128
+  45:Core/common/drivers/hx711.c **** 				hx711->Again = 1;
+ 163              		.loc 1 45 5 view .LVU41
+ 164              		.loc 1 45 18 is_stmt 0 view .LVU42
+ 165 0008 0123     		movs	r3, #1
+ 166 000a 0375     		strb	r3, [r0, #20]
+  46:Core/common/drivers/hx711.c **** 				break;
+ 167              		.loc 1 46 5 is_stmt 1 view .LVU43
+ 168              	.L6:
+  47:Core/common/drivers/hx711.c **** 			case 64:		// channel A, gain factor 64
+  48:Core/common/drivers/hx711.c **** 				hx711->Again = 3;
+  49:Core/common/drivers/hx711.c **** 				break;
+  50:Core/common/drivers/hx711.c **** 		}
+  51:Core/common/drivers/hx711.c **** 	hx711->Bgain = 2;
+ 169              		.loc 1 51 2 view .LVU44
+ 170              		.loc 1 51 15 is_stmt 0 view .LVU45
+ 171 000c 0223     		movs	r3, #2
+ 172 000e 80F82030 		strb	r3, [r0, #32]
+  52:Core/common/drivers/hx711.c **** }
+ 173              		.loc 1 52 1 view .LVU46
+ 174 0012 7047     		bx	lr
+ 175              	.L5:
+  48:Core/common/drivers/hx711.c **** 				break;
+ 176              		.loc 1 48 5 is_stmt 1 view .LVU47
+  48:Core/common/drivers/hx711.c **** 				break;
+ 177              		.loc 1 48 18 is_stmt 0 view .LVU48
+ 178 0014 0323     		movs	r3, #3
+ 179 0016 0375     		strb	r3, [r0, #20]
+ARM GAS  /tmp/ccWHBv4Z.s 			page 5
+
+
+  49:Core/common/drivers/hx711.c **** 		}
+ 180              		.loc 1 49 5 is_stmt 1 view .LVU49
+ 181 0018 F8E7     		b	.L6
+ 182              		.cfi_endproc
+ 183              	.LFE67:
+ 185              		.section	.text.set_offset,"ax",%progbits
+ 186              		.align	1
+ 187              		.global	set_offset
+ 188              		.syntax unified
+ 189              		.thumb
+ 190              		.thumb_func
+ 191              		.fpu softvfp
+ 193              	set_offset:
+ 194              	.LVL7:
+ 195              	.LFB68:
+  53:Core/common/drivers/hx711.c **** 
+  54:Core/common/drivers/hx711.c **** //#############################################################################################
+  55:Core/common/drivers/hx711.c **** void set_offset(hx711_t *hx711, long offset, uint8_t channel){
+ 196              		.loc 1 55 62 view -0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200              		@ link register save eliminated.
+  56:Core/common/drivers/hx711.c **** 	if(channel == CHANNEL_A) hx711->Aoffset = offset;
+ 201              		.loc 1 56 2 view .LVU51
+ 202              		.loc 1 56 4 is_stmt 0 view .LVU52
+ 203 0000 0AB9     		cbnz	r2, .L8
+ 204              		.loc 1 56 27 is_stmt 1 discriminator 1 view .LVU53
+ 205              		.loc 1 56 42 is_stmt 0 discriminator 1 view .LVU54
+ 206 0002 C160     		str	r1, [r0, #12]
+ 207 0004 7047     		bx	lr
+ 208              	.L8:
+  57:Core/common/drivers/hx711.c **** 	else hx711->Boffset = offset;
+ 209              		.loc 1 57 7 is_stmt 1 view .LVU55
+ 210              		.loc 1 57 22 is_stmt 0 view .LVU56
+ 211 0006 8161     		str	r1, [r0, #24]
+  58:Core/common/drivers/hx711.c **** }
+ 212              		.loc 1 58 1 view .LVU57
+ 213 0008 7047     		bx	lr
+ 214              		.cfi_endproc
+ 215              	.LFE68:
+ 217              		.section	.text.shiftIn,"ax",%progbits
+ 218              		.align	1
+ 219              		.global	shiftIn
+ 220              		.syntax unified
+ 221              		.thumb
+ 222              		.thumb_func
+ 223              		.fpu softvfp
+ 225              	shiftIn:
+ 226              	.LVL8:
+ 227              	.LFB69:
+  59:Core/common/drivers/hx711.c **** 
+  60:Core/common/drivers/hx711.c **** //############################################################################################
+  61:Core/common/drivers/hx711.c **** uint8_t shiftIn(hx711_t *hx711, uint8_t bitOrder) {
+ 228              		.loc 1 61 51 is_stmt 1 view -0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccWHBv4Z.s 			page 6
+
+
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232              		.loc 1 61 51 is_stmt 0 view .LVU59
+ 233 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 234              	.LCFI3:
+ 235              		.cfi_def_cfa_offset 24
+ 236              		.cfi_offset 3, -24
+ 237              		.cfi_offset 4, -20
+ 238              		.cfi_offset 5, -16
+ 239              		.cfi_offset 6, -12
+ 240              		.cfi_offset 7, -8
+ 241              		.cfi_offset 14, -4
+ 242 0002 0546     		mov	r5, r0
+ 243 0004 0E46     		mov	r6, r1
+  62:Core/common/drivers/hx711.c ****     uint8_t value = 0;
+ 244              		.loc 1 62 5 is_stmt 1 view .LVU60
+ 245              	.LVL9:
+  63:Core/common/drivers/hx711.c ****     uint8_t i;
+ 246              		.loc 1 63 5 view .LVU61
+  64:Core/common/drivers/hx711.c **** 
+  65:Core/common/drivers/hx711.c ****     for(i = 0; i < 8; ++i) {
+ 247              		.loc 1 65 5 view .LVU62
+ 248              		.loc 1 65 11 is_stmt 0 view .LVU63
+ 249 0006 0024     		movs	r4, #0
+  62:Core/common/drivers/hx711.c ****     uint8_t i;
+ 250              		.loc 1 62 13 view .LVU64
+ 251 0008 2746     		mov	r7, r4
+ 252              		.loc 1 65 5 view .LVU65
+ 253 000a 0FE0     		b	.L11
+ 254              	.LVL10:
+ 255              	.L12:
+  66:Core/common/drivers/hx711.c ****     	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+  67:Core/common/drivers/hx711.c ****         if(bitOrder == 0)
+  68:Core/common/drivers/hx711.c ****             value |= HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) << i;
+  69:Core/common/drivers/hx711.c ****         else
+  70:Core/common/drivers/hx711.c ****             value |= HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) << (7 - i);
+ 256              		.loc 1 70 13 is_stmt 1 view .LVU66
+ 257              		.loc 1 70 22 is_stmt 0 view .LVU67
+ 258 000c 6989     		ldrh	r1, [r5, #10]
+ 259 000e 6868     		ldr	r0, [r5, #4]
+ 260 0010 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 261              	.LVL11:
+ 262              		.loc 1 70 78 view .LVU68
+ 263 0014 C4F10703 		rsb	r3, r4, #7
+ 264              		.loc 1 70 72 view .LVU69
+ 265 0018 9840     		lsls	r0, r0, r3
+ 266              		.loc 1 70 19 view .LVU70
+ 267 001a 3843     		orrs	r0, r0, r7
+ 268 001c C7B2     		uxtb	r7, r0
+ 269              	.LVL12:
+ 270              	.L13:
+  71:Core/common/drivers/hx711.c ****         HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, RESET);
+ 271              		.loc 1 71 9 is_stmt 1 discriminator 2 view .LVU71
+ 272 001e 0022     		movs	r2, #0
+ 273 0020 2989     		ldrh	r1, [r5, #8]
+ 274 0022 2868     		ldr	r0, [r5]
+ 275 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 276              	.LVL13:
+ARM GAS  /tmp/ccWHBv4Z.s 			page 7
+
+
+  65:Core/common/drivers/hx711.c ****     	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 277              		.loc 1 65 23 discriminator 2 view .LVU72
+ 278 0028 0134     		adds	r4, r4, #1
+ 279              	.LVL14:
+  65:Core/common/drivers/hx711.c ****     	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 280              		.loc 1 65 23 is_stmt 0 discriminator 2 view .LVU73
+ 281 002a E4B2     		uxtb	r4, r4
+ 282              	.LVL15:
+ 283              	.L11:
+  65:Core/common/drivers/hx711.c ****     	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 284              		.loc 1 65 16 is_stmt 1 discriminator 1 view .LVU74
+  65:Core/common/drivers/hx711.c ****     	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 285              		.loc 1 65 5 is_stmt 0 discriminator 1 view .LVU75
+ 286 002c 072C     		cmp	r4, #7
+ 287 002e 0ED8     		bhi	.L16
+  66:Core/common/drivers/hx711.c ****     	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 288              		.loc 1 66 6 is_stmt 1 view .LVU76
+ 289 0030 0122     		movs	r2, #1
+ 290 0032 2989     		ldrh	r1, [r5, #8]
+ 291 0034 2868     		ldr	r0, [r5]
+ 292 0036 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 293              	.LVL16:
+  67:Core/common/drivers/hx711.c ****             value |= HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) << i;
+ 294              		.loc 1 67 9 view .LVU77
+  67:Core/common/drivers/hx711.c ****             value |= HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) << i;
+ 295              		.loc 1 67 11 is_stmt 0 view .LVU78
+ 296 003a 002E     		cmp	r6, #0
+ 297 003c E6D1     		bne	.L12
+  68:Core/common/drivers/hx711.c ****         else
+ 298              		.loc 1 68 13 is_stmt 1 view .LVU79
+  68:Core/common/drivers/hx711.c ****         else
+ 299              		.loc 1 68 22 is_stmt 0 view .LVU80
+ 300 003e 6989     		ldrh	r1, [r5, #10]
+ 301 0040 6868     		ldr	r0, [r5, #4]
+ 302 0042 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 303              	.LVL17:
+  68:Core/common/drivers/hx711.c ****         else
+ 304              		.loc 1 68 72 view .LVU81
+ 305 0046 A040     		lsls	r0, r0, r4
+  68:Core/common/drivers/hx711.c ****         else
+ 306              		.loc 1 68 19 view .LVU82
+ 307 0048 3843     		orrs	r0, r0, r7
+ 308 004a C7B2     		uxtb	r7, r0
+ 309              	.LVL18:
+  68:Core/common/drivers/hx711.c ****         else
+ 310              		.loc 1 68 19 view .LVU83
+ 311 004c E7E7     		b	.L13
+ 312              	.L16:
+  72:Core/common/drivers/hx711.c ****     }
+  73:Core/common/drivers/hx711.c ****     return value;
+ 313              		.loc 1 73 5 is_stmt 1 view .LVU84
+  74:Core/common/drivers/hx711.c **** }
+ 314              		.loc 1 74 1 is_stmt 0 view .LVU85
+ 315 004e 3846     		mov	r0, r7
+ 316 0050 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 317              		.loc 1 74 1 view .LVU86
+ 318              		.cfi_endproc
+ARM GAS  /tmp/ccWHBv4Z.s 			page 8
+
+
+ 319              	.LFE69:
+ 321              		.section	.text.is_ready,"ax",%progbits
+ 322              		.align	1
+ 323              		.global	is_ready
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 327              		.fpu softvfp
+ 329              	is_ready:
+ 330              	.LVL19:
+ 331              	.LFB70:
+  75:Core/common/drivers/hx711.c **** 
+  76:Core/common/drivers/hx711.c **** //############################################################################################
+  77:Core/common/drivers/hx711.c **** bool is_ready(hx711_t *hx711) {
+ 332              		.loc 1 77 31 is_stmt 1 view -0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		.loc 1 77 31 is_stmt 0 view .LVU88
+ 337 0000 08B5     		push	{r3, lr}
+ 338              	.LCFI4:
+ 339              		.cfi_def_cfa_offset 8
+ 340              		.cfi_offset 3, -8
+ 341              		.cfi_offset 14, -4
+  78:Core/common/drivers/hx711.c **** 	if(HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) == GPIO_PIN_RESET){
+ 342              		.loc 1 78 2 is_stmt 1 view .LVU89
+ 343              		.loc 1 78 5 is_stmt 0 view .LVU90
+ 344 0002 4189     		ldrh	r1, [r0, #10]
+ 345 0004 4068     		ldr	r0, [r0, #4]
+ 346              	.LVL20:
+ 347              		.loc 1 78 5 view .LVU91
+ 348 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 349              	.LVL21:
+ 350              		.loc 1 78 4 view .LVU92
+ 351 000a 08B1     		cbz	r0, .L19
+  79:Core/common/drivers/hx711.c **** 		return 1;
+  80:Core/common/drivers/hx711.c **** 	}
+  81:Core/common/drivers/hx711.c **** 	return 0;
+ 352              		.loc 1 81 9 view .LVU93
+ 353 000c 0020     		movs	r0, #0
+ 354              	.L18:
+  82:Core/common/drivers/hx711.c **** }
+ 355              		.loc 1 82 1 view .LVU94
+ 356 000e 08BD     		pop	{r3, pc}
+ 357              	.L19:
+  79:Core/common/drivers/hx711.c **** 		return 1;
+ 358              		.loc 1 79 10 view .LVU95
+ 359 0010 0120     		movs	r0, #1
+ 360 0012 FCE7     		b	.L18
+ 361              		.cfi_endproc
+ 362              	.LFE70:
+ 364              		.section	.text.wait_ready,"ax",%progbits
+ 365              		.align	1
+ 366              		.global	wait_ready
+ 367              		.syntax unified
+ 368              		.thumb
+ 369              		.thumb_func
+ARM GAS  /tmp/ccWHBv4Z.s 			page 9
+
+
+ 370              		.fpu softvfp
+ 372              	wait_ready:
+ 373              	.LVL22:
+ 374              	.LFB71:
+  83:Core/common/drivers/hx711.c **** 
+  84:Core/common/drivers/hx711.c **** //############################################################################################
+  85:Core/common/drivers/hx711.c **** void wait_ready(hx711_t *hx711) {
+ 375              		.loc 1 85 33 is_stmt 1 view -0
+ 376              		.cfi_startproc
+ 377              		@ args = 0, pretend = 0, frame = 0
+ 378              		@ frame_needed = 0, uses_anonymous_args = 0
+ 379              		.loc 1 85 33 is_stmt 0 view .LVU97
+ 380 0000 10B5     		push	{r4, lr}
+ 381              	.LCFI5:
+ 382              		.cfi_def_cfa_offset 8
+ 383              		.cfi_offset 4, -8
+ 384              		.cfi_offset 14, -4
+ 385 0002 0446     		mov	r4, r0
+  86:Core/common/drivers/hx711.c **** 	// Wait for the chip to become ready.
+  87:Core/common/drivers/hx711.c **** 	while (!is_ready(hx711)) {
+ 386              		.loc 1 87 2 is_stmt 1 view .LVU98
+ 387              		.loc 1 87 8 is_stmt 0 view .LVU99
+ 388 0004 02E0     		b	.L22
+ 389              	.LVL23:
+ 390              	.L23:
+  88:Core/common/drivers/hx711.c **** 		HAL_Delay(0);
+ 391              		.loc 1 88 3 is_stmt 1 view .LVU100
+ 392 0006 0020     		movs	r0, #0
+ 393 0008 FFF7FEFF 		bl	HAL_Delay
+ 394              	.LVL24:
+ 395              	.L22:
+  87:Core/common/drivers/hx711.c **** 		HAL_Delay(0);
+ 396              		.loc 1 87 8 view .LVU101
+  87:Core/common/drivers/hx711.c **** 		HAL_Delay(0);
+ 397              		.loc 1 87 10 is_stmt 0 view .LVU102
+ 398 000c 2046     		mov	r0, r4
+ 399 000e FFF7FEFF 		bl	is_ready
+ 400              	.LVL25:
+  87:Core/common/drivers/hx711.c **** 		HAL_Delay(0);
+ 401              		.loc 1 87 8 view .LVU103
+ 402 0012 0028     		cmp	r0, #0
+ 403 0014 F7D0     		beq	.L23
+  89:Core/common/drivers/hx711.c **** 	}
+  90:Core/common/drivers/hx711.c **** }
+ 404              		.loc 1 90 1 view .LVU104
+ 405 0016 10BD     		pop	{r4, pc}
+ 406              		.loc 1 90 1 view .LVU105
+ 407              		.cfi_endproc
+ 408              	.LFE71:
+ 410              		.section	.text.read,"ax",%progbits
+ 411              		.align	1
+ 412              		.global	read
+ 413              		.syntax unified
+ 414              		.thumb
+ 415              		.thumb_func
+ 416              		.fpu softvfp
+ 418              	read:
+ARM GAS  /tmp/ccWHBv4Z.s 			page 10
+
+
+ 419              	.LVL26:
+ 420              	.LFB72:
+  91:Core/common/drivers/hx711.c **** 
+  92:Core/common/drivers/hx711.c **** //############################################################################################
+  93:Core/common/drivers/hx711.c **** long read(hx711_t *hx711, uint8_t channel){
+ 421              		.loc 1 93 43 is_stmt 1 view -0
+ 422              		.cfi_startproc
+ 423              		@ args = 0, pretend = 0, frame = 8
+ 424              		@ frame_needed = 0, uses_anonymous_args = 0
+ 425              		.loc 1 93 43 is_stmt 0 view .LVU107
+ 426 0000 70B5     		push	{r4, r5, r6, lr}
+ 427              	.LCFI6:
+ 428              		.cfi_def_cfa_offset 16
+ 429              		.cfi_offset 4, -16
+ 430              		.cfi_offset 5, -12
+ 431              		.cfi_offset 6, -8
+ 432              		.cfi_offset 14, -4
+ 433 0002 82B0     		sub	sp, sp, #8
+ 434              	.LCFI7:
+ 435              		.cfi_def_cfa_offset 24
+ 436 0004 0446     		mov	r4, r0
+ 437 0006 0D46     		mov	r5, r1
+  94:Core/common/drivers/hx711.c **** 	wait_ready(hx711);
+ 438              		.loc 1 94 2 is_stmt 1 view .LVU108
+ 439 0008 FFF7FEFF 		bl	wait_ready
+ 440              	.LVL27:
+  95:Core/common/drivers/hx711.c **** 	unsigned long value = 0;
+ 441              		.loc 1 95 2 view .LVU109
+  96:Core/common/drivers/hx711.c **** 	uint8_t data[3] = { 0 };
+ 442              		.loc 1 96 2 view .LVU110
+ 443              		.loc 1 96 10 is_stmt 0 view .LVU111
+ 444 000c 214B     		ldr	r3, .L34
+ 445 000e 1B88     		ldrh	r3, [r3]
+ 446 0010 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 447 0014 0023     		movs	r3, #0
+ 448 0016 8DF80630 		strb	r3, [sp, #6]
+  97:Core/common/drivers/hx711.c **** 	uint8_t filler = 0x00;
+ 449              		.loc 1 97 2 is_stmt 1 view .LVU112
+ 450              	.LVL28:
+  98:Core/common/drivers/hx711.c **** 
+  99:Core/common/drivers/hx711.c **** 	noInterrupts();
+ 451              		.loc 1 99 2 view .LVU113
+ 452              	.LBB7:
+ 453              	.LBI7:
+ 454              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
+   1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.0.4
+   5:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     09. April 2018
+   6:Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Drivers/CMSIS/Include/cmsis_gcc.h **** /*
+   8:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
+   9:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+ARM GAS  /tmp/ccWHBv4Z.s 			page 11
+
+
+  13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:Drivers/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  16:Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  18:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:Drivers/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:Drivers/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
+  23:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  24:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  25:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  28:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  38:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
+  41:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  49:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif                                           
+  52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
+  56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  61:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  64:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ARM GAS  /tmp/ccWHBv4Z.s 			page 12
+
+
+  70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:Drivers/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  78:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  94:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 118:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 119:Drivers/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 120:Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 121:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
+ 122:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 123:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ARM GAS  /tmp/ccWHBv4Z.s 			page 13
+
+
+ 127:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 128:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 129:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 130:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 131:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 132:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 133:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 134:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 135:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 136:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 137:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 138:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 139:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+ 455              		.loc 2 140 27 view .LVU114
+ 456              	.LBB8:
+ 141:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 142:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 457              		.loc 2 142 3 view .LVU115
+ 458              		.syntax unified
+ 459              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 460 001a 72B6     		cpsid i
+ 461              	@ 0 "" 2
+ 462              		.thumb
+ 463              		.syntax unified
+ 464              	.LBE8:
+ 465              	.LBE7:
+ 100:Core/common/drivers/hx711.c **** 
+ 101:Core/common/drivers/hx711.c **** 	data[2] = shiftIn(hx711, 1);
+ 466              		.loc 1 101 2 view .LVU116
+ 467              		.loc 1 101 12 is_stmt 0 view .LVU117
+ 468 001c 0121     		movs	r1, #1
+ 469 001e 2046     		mov	r0, r4
+ 470 0020 FFF7FEFF 		bl	shiftIn
+ 471              	.LVL29:
+ 472              		.loc 1 101 10 view .LVU118
+ 473 0024 8DF80600 		strb	r0, [sp, #6]
+ 102:Core/common/drivers/hx711.c **** 	data[1] = shiftIn(hx711, 1);
+ 474              		.loc 1 102 2 is_stmt 1 view .LVU119
+ 475              		.loc 1 102 12 is_stmt 0 view .LVU120
+ 476 0028 0121     		movs	r1, #1
+ 477 002a 2046     		mov	r0, r4
+ 478 002c FFF7FEFF 		bl	shiftIn
+ 479              	.LVL30:
+ 480              		.loc 1 102 10 view .LVU121
+ 481 0030 8DF80500 		strb	r0, [sp, #5]
+ 103:Core/common/drivers/hx711.c **** 	data[0] = shiftIn(hx711, 1);
+ 482              		.loc 1 103 2 is_stmt 1 view .LVU122
+ 483              		.loc 1 103 12 is_stmt 0 view .LVU123
+ 484 0034 0121     		movs	r1, #1
+ 485 0036 2046     		mov	r0, r4
+ 486 0038 FFF7FEFF 		bl	shiftIn
+ 487              	.LVL31:
+ 488              		.loc 1 103 10 view .LVU124
+ 489 003c 8DF80400 		strb	r0, [sp, #4]
+ 104:Core/common/drivers/hx711.c **** 
+ 105:Core/common/drivers/hx711.c **** 	uint8_t gain = 0;
+ARM GAS  /tmp/ccWHBv4Z.s 			page 14
+
+
+ 490              		.loc 1 105 2 is_stmt 1 view .LVU125
+ 491              	.LVL32:
+ 106:Core/common/drivers/hx711.c **** 	if(channel == 0) gain = hx711->Again;
+ 492              		.loc 1 106 2 view .LVU126
+ 493              		.loc 1 106 4 is_stmt 0 view .LVU127
+ 494 0040 15B9     		cbnz	r5, .L26
+ 495              		.loc 1 106 19 is_stmt 1 discriminator 1 view .LVU128
+ 496              		.loc 1 106 24 is_stmt 0 discriminator 1 view .LVU129
+ 497 0042 267D     		ldrb	r6, [r4, #20]	@ zero_extendqisi2
+ 498              	.LVL33:
+ 499              	.L27:
+ 107:Core/common/drivers/hx711.c **** 	else gain = hx711->Bgain;
+ 108:Core/common/drivers/hx711.c **** 
+ 109:Core/common/drivers/hx711.c **** 	for (unsigned int i = 0; i < gain; i++) {
+ 500              		.loc 1 109 2 is_stmt 1 view .LVU130
+ 501              	.LBB9:
+ 502              		.loc 1 109 7 view .LVU131
+ 503              		.loc 1 109 20 is_stmt 0 view .LVU132
+ 504 0044 0025     		movs	r5, #0
+ 505              		.loc 1 109 2 view .LVU133
+ 506 0046 0DE0     		b	.L28
+ 507              	.LVL34:
+ 508              	.L26:
+ 509              		.loc 1 109 2 view .LVU134
+ 510              	.LBE9:
+ 107:Core/common/drivers/hx711.c **** 	else gain = hx711->Bgain;
+ 511              		.loc 1 107 7 is_stmt 1 view .LVU135
+ 107:Core/common/drivers/hx711.c **** 	else gain = hx711->Bgain;
+ 512              		.loc 1 107 12 is_stmt 0 view .LVU136
+ 513 0048 94F82060 		ldrb	r6, [r4, #32]	@ zero_extendqisi2
+ 514              	.LVL35:
+ 107:Core/common/drivers/hx711.c **** 	else gain = hx711->Bgain;
+ 515              		.loc 1 107 12 view .LVU137
+ 516 004c FAE7     		b	.L27
+ 517              	.LVL36:
+ 518              	.L29:
+ 519              	.LBB10:
+ 110:Core/common/drivers/hx711.c **** 		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 520              		.loc 1 110 3 is_stmt 1 discriminator 3 view .LVU138
+ 521 004e 0122     		movs	r2, #1
+ 522 0050 2189     		ldrh	r1, [r4, #8]
+ 523 0052 2068     		ldr	r0, [r4]
+ 524 0054 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 525              	.LVL37:
+ 111:Core/common/drivers/hx711.c **** 		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, RESET);
+ 526              		.loc 1 111 3 discriminator 3 view .LVU139
+ 527 0058 0022     		movs	r2, #0
+ 528 005a 2189     		ldrh	r1, [r4, #8]
+ 529 005c 2068     		ldr	r0, [r4]
+ 530 005e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 531              	.LVL38:
+ 109:Core/common/drivers/hx711.c **** 		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 532              		.loc 1 109 37 discriminator 3 view .LVU140
+ 109:Core/common/drivers/hx711.c **** 		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 533              		.loc 1 109 38 is_stmt 0 discriminator 3 view .LVU141
+ 534 0062 0135     		adds	r5, r5, #1
+ 535              	.LVL39:
+ARM GAS  /tmp/ccWHBv4Z.s 			page 15
+
+
+ 536              	.L28:
+ 109:Core/common/drivers/hx711.c **** 		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 537              		.loc 1 109 27 is_stmt 1 discriminator 1 view .LVU142
+ 109:Core/common/drivers/hx711.c **** 		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
+ 538              		.loc 1 109 2 is_stmt 0 discriminator 1 view .LVU143
+ 539 0064 AE42     		cmp	r6, r5
+ 540 0066 F2D8     		bhi	.L29
+ 541              	.LBE10:
+ 112:Core/common/drivers/hx711.c **** 	}
+ 113:Core/common/drivers/hx711.c **** 
+ 114:Core/common/drivers/hx711.c **** 	interrupts();
+ 542              		.loc 1 114 2 is_stmt 1 view .LVU144
+ 543              	.LBB11:
+ 544              	.LBI11:
+ 129:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 545              		.loc 2 129 27 view .LVU145
+ 546              	.LBB12:
+ 131:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 547              		.loc 2 131 3 view .LVU146
+ 548              		.syntax unified
+ 549              	@ 131 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 550 0068 62B6     		cpsie i
+ 551              	@ 0 "" 2
+ 552              		.thumb
+ 553              		.syntax unified
+ 554              	.LBE12:
+ 555              	.LBE11:
+ 115:Core/common/drivers/hx711.c **** 
+ 116:Core/common/drivers/hx711.c **** 	// Replicate the most significant bit to pad out a 32-bit signed integer
+ 117:Core/common/drivers/hx711.c **** 	if (data[2] & 0x80) {
+ 556              		.loc 1 117 2 view .LVU147
+ 557              		.loc 1 117 10 is_stmt 0 view .LVU148
+ 558 006a 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 559              		.loc 1 117 6 view .LVU149
+ 560 006e 9DF90620 		ldrsb	r2, [sp, #6]
+ 561              		.loc 1 117 5 view .LVU150
+ 562 0072 002A     		cmp	r2, #0
+ 563 0074 0CDB     		blt	.L33
+ 118:Core/common/drivers/hx711.c **** 		filler = 0xFF;
+ 119:Core/common/drivers/hx711.c **** 	} else {
+ 120:Core/common/drivers/hx711.c **** 		filler = 0x00;
+ 564              		.loc 1 120 10 view .LVU151
+ 565 0076 0020     		movs	r0, #0
+ 566              	.L30:
+ 567              	.LVL40:
+ 121:Core/common/drivers/hx711.c **** 	}
+ 122:Core/common/drivers/hx711.c **** 
+ 123:Core/common/drivers/hx711.c **** 	// Construct a 32-bit signed integer
+ 124:Core/common/drivers/hx711.c **** 	value = ( (unsigned long)(filler) << 24
+ 568              		.loc 1 124 2 is_stmt 1 view .LVU152
+ 125:Core/common/drivers/hx711.c **** 			| (unsigned long)(data[2]) << 16
+ 569              		.loc 1 125 31 is_stmt 0 view .LVU153
+ 570 0078 1B04     		lsls	r3, r3, #16
+ 571              		.loc 1 125 4 view .LVU154
+ 572 007a 43EA0063 		orr	r3, r3, r0, lsl #24
+ 126:Core/common/drivers/hx711.c **** 			| (unsigned long)(data[1]) << 8
+ 573              		.loc 1 126 26 view .LVU155
+ARM GAS  /tmp/ccWHBv4Z.s 			page 16
+
+
+ 574 007e 9DF80500 		ldrb	r0, [sp, #5]	@ zero_extendqisi2
+ 575              	.LVL41:
+ 576              		.loc 1 126 4 view .LVU156
+ 577 0082 43EA0023 		orr	r3, r3, r0, lsl #8
+ 127:Core/common/drivers/hx711.c **** 			| (unsigned long)(data[0]) );
+ 578              		.loc 1 127 26 view .LVU157
+ 579 0086 9DF80400 		ldrb	r0, [sp, #4]	@ zero_extendqisi2
+ 580              	.LVL42:
+ 128:Core/common/drivers/hx711.c **** 
+ 129:Core/common/drivers/hx711.c **** 	return (long)(value);
+ 581              		.loc 1 129 2 is_stmt 1 view .LVU158
+ 130:Core/common/drivers/hx711.c **** }
+ 582              		.loc 1 130 1 is_stmt 0 view .LVU159
+ 583 008a 1843     		orrs	r0, r0, r3
+ 584              	.LVL43:
+ 585              		.loc 1 130 1 view .LVU160
+ 586 008c 02B0     		add	sp, sp, #8
+ 587              	.LCFI8:
+ 588              		.cfi_remember_state
+ 589              		.cfi_def_cfa_offset 16
+ 590              		@ sp needed
+ 591 008e 70BD     		pop	{r4, r5, r6, pc}
+ 592              	.LVL44:
+ 593              	.L33:
+ 594              	.LCFI9:
+ 595              		.cfi_restore_state
+ 118:Core/common/drivers/hx711.c **** 	} else {
+ 596              		.loc 1 118 10 view .LVU161
+ 597 0090 FF20     		movs	r0, #255
+ 598 0092 F1E7     		b	.L30
+ 599              	.L35:
+ 600              		.align	2
+ 601              	.L34:
+ 602 0094 00000000 		.word	.LANCHOR0
+ 603              		.cfi_endproc
+ 604              	.LFE72:
+ 606              		.section	.text.read_average,"ax",%progbits
+ 607              		.align	1
+ 608              		.global	read_average
+ 609              		.syntax unified
+ 610              		.thumb
+ 611              		.thumb_func
+ 612              		.fpu softvfp
+ 614              	read_average:
+ 615              	.LVL45:
+ 616              	.LFB73:
+ 131:Core/common/drivers/hx711.c **** 
+ 132:Core/common/drivers/hx711.c **** //############################################################################################
+ 133:Core/common/drivers/hx711.c **** long read_average(hx711_t *hx711, int8_t times, uint8_t channel) {
+ 617              		.loc 1 133 66 is_stmt 1 view -0
+ 618              		.cfi_startproc
+ 619              		@ args = 0, pretend = 0, frame = 0
+ 620              		@ frame_needed = 0, uses_anonymous_args = 0
+ 621              		.loc 1 133 66 is_stmt 0 view .LVU163
+ 622 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 623              	.LCFI10:
+ 624              		.cfi_def_cfa_offset 24
+ARM GAS  /tmp/ccWHBv4Z.s 			page 17
+
+
+ 625              		.cfi_offset 4, -24
+ 626              		.cfi_offset 5, -20
+ 627              		.cfi_offset 6, -16
+ 628              		.cfi_offset 7, -12
+ 629              		.cfi_offset 8, -8
+ 630              		.cfi_offset 14, -4
+ 631 0004 8046     		mov	r8, r0
+ 632 0006 0E46     		mov	r6, r1
+ 633 0008 1746     		mov	r7, r2
+ 134:Core/common/drivers/hx711.c **** 	long sum = 0;
+ 634              		.loc 1 134 2 is_stmt 1 view .LVU164
+ 635              	.LVL46:
+ 135:Core/common/drivers/hx711.c **** 	for (int8_t i = 0; i < times; i++) {
+ 636              		.loc 1 135 2 view .LVU165
+ 637              	.LBB13:
+ 638              		.loc 1 135 7 view .LVU166
+ 639              		.loc 1 135 14 is_stmt 0 view .LVU167
+ 640 000a 0024     		movs	r4, #0
+ 641              	.LBE13:
+ 134:Core/common/drivers/hx711.c **** 	long sum = 0;
+ 642              		.loc 1 134 7 view .LVU168
+ 643 000c 2546     		mov	r5, r4
+ 644              	.LBB14:
+ 645              		.loc 1 135 2 view .LVU169
+ 646 000e 09E0     		b	.L37
+ 647              	.LVL47:
+ 648              	.L38:
+ 136:Core/common/drivers/hx711.c **** 		sum += read(hx711, channel);
+ 649              		.loc 1 136 3 is_stmt 1 discriminator 3 view .LVU170
+ 650              		.loc 1 136 10 is_stmt 0 discriminator 3 view .LVU171
+ 651 0010 3946     		mov	r1, r7
+ 652 0012 4046     		mov	r0, r8
+ 653 0014 FFF7FEFF 		bl	read
+ 654              	.LVL48:
+ 655              		.loc 1 136 7 discriminator 3 view .LVU172
+ 656 0018 0544     		add	r5, r5, r0
+ 657              	.LVL49:
+ 137:Core/common/drivers/hx711.c **** 		HAL_Delay(0);
+ 658              		.loc 1 137 3 is_stmt 1 discriminator 3 view .LVU173
+ 659 001a 0020     		movs	r0, #0
+ 660 001c FFF7FEFF 		bl	HAL_Delay
+ 661              	.LVL50:
+ 135:Core/common/drivers/hx711.c **** 	for (int8_t i = 0; i < times; i++) {
+ 662              		.loc 1 135 32 discriminator 3 view .LVU174
+ 135:Core/common/drivers/hx711.c **** 	for (int8_t i = 0; i < times; i++) {
+ 663              		.loc 1 135 33 is_stmt 0 discriminator 3 view .LVU175
+ 664 0020 0134     		adds	r4, r4, #1
+ 665              	.LVL51:
+ 135:Core/common/drivers/hx711.c **** 	for (int8_t i = 0; i < times; i++) {
+ 666              		.loc 1 135 33 discriminator 3 view .LVU176
+ 667 0022 64B2     		sxtb	r4, r4
+ 668              	.LVL52:
+ 669              	.L37:
+ 135:Core/common/drivers/hx711.c **** 	for (int8_t i = 0; i < times; i++) {
+ 670              		.loc 1 135 21 is_stmt 1 discriminator 1 view .LVU177
+ 135:Core/common/drivers/hx711.c **** 	for (int8_t i = 0; i < times; i++) {
+ 671              		.loc 1 135 2 is_stmt 0 discriminator 1 view .LVU178
+ARM GAS  /tmp/ccWHBv4Z.s 			page 18
+
+
+ 672 0024 B442     		cmp	r4, r6
+ 673 0026 F3DB     		blt	.L38
+ 674              	.LBE14:
+ 138:Core/common/drivers/hx711.c **** 	}
+ 139:Core/common/drivers/hx711.c **** 	return sum / times;
+ 675              		.loc 1 139 2 is_stmt 1 view .LVU179
+ 140:Core/common/drivers/hx711.c **** }
+ 676              		.loc 1 140 1 is_stmt 0 view .LVU180
+ 677 0028 95FBF6F0 		sdiv	r0, r5, r6
+ 678 002c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 679              		.loc 1 140 1 view .LVU181
+ 680              		.cfi_endproc
+ 681              	.LFE73:
+ 683              		.global	__aeabi_i2d
+ 684              		.section	.text.get_value,"ax",%progbits
+ 685              		.align	1
+ 686              		.global	get_value
+ 687              		.syntax unified
+ 688              		.thumb
+ 689              		.thumb_func
+ 690              		.fpu softvfp
+ 692              	get_value:
+ 693              	.LVL53:
+ 694              	.LFB74:
+ 141:Core/common/drivers/hx711.c **** 
+ 142:Core/common/drivers/hx711.c **** //############################################################################################
+ 143:Core/common/drivers/hx711.c **** double get_value(hx711_t *hx711, int8_t times, uint8_t channel) {
+ 695              		.loc 1 143 65 is_stmt 1 view -0
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 0, uses_anonymous_args = 0
+ 699              		.loc 1 143 65 is_stmt 0 view .LVU183
+ 700 0000 10B5     		push	{r4, lr}
+ 701              	.LCFI11:
+ 702              		.cfi_def_cfa_offset 8
+ 703              		.cfi_offset 4, -8
+ 704              		.cfi_offset 14, -4
+ 144:Core/common/drivers/hx711.c **** 	long offset = 0;
+ 705              		.loc 1 144 2 is_stmt 1 view .LVU184
+ 706              	.LVL54:
+ 145:Core/common/drivers/hx711.c **** 	if(channel == CHANNEL_A) offset = hx711->Aoffset;
+ 707              		.loc 1 145 2 view .LVU185
+ 708              		.loc 1 145 4 is_stmt 0 view .LVU186
+ 709 0002 32B9     		cbnz	r2, .L41
+ 710              		.loc 1 145 27 is_stmt 1 discriminator 1 view .LVU187
+ 711              		.loc 1 145 34 is_stmt 0 discriminator 1 view .LVU188
+ 712 0004 C468     		ldr	r4, [r0, #12]
+ 713              	.LVL55:
+ 714              	.L42:
+ 146:Core/common/drivers/hx711.c **** 	else offset = hx711->Boffset;
+ 147:Core/common/drivers/hx711.c **** 	return read_average(hx711, times, channel) - offset;
+ 715              		.loc 1 147 2 is_stmt 1 view .LVU189
+ 716              		.loc 1 147 9 is_stmt 0 view .LVU190
+ 717 0006 FFF7FEFF 		bl	read_average
+ 718              	.LVL56:
+ 719              		.loc 1 147 45 view .LVU191
+ 720 000a 001B     		subs	r0, r0, r4
+ARM GAS  /tmp/ccWHBv4Z.s 			page 19
+
+
+ 721 000c FFF7FEFF 		bl	__aeabi_i2d
+ 722              	.LVL57:
+ 148:Core/common/drivers/hx711.c **** }
+ 723              		.loc 1 148 1 view .LVU192
+ 724 0010 10BD     		pop	{r4, pc}
+ 725              	.LVL58:
+ 726              	.L41:
+ 146:Core/common/drivers/hx711.c **** 	else offset = hx711->Boffset;
+ 727              		.loc 1 146 7 is_stmt 1 view .LVU193
+ 146:Core/common/drivers/hx711.c **** 	else offset = hx711->Boffset;
+ 728              		.loc 1 146 14 is_stmt 0 view .LVU194
+ 729 0012 8469     		ldr	r4, [r0, #24]
+ 730              	.LVL59:
+ 146:Core/common/drivers/hx711.c **** 	else offset = hx711->Boffset;
+ 731              		.loc 1 146 14 view .LVU195
+ 732 0014 F7E7     		b	.L42
+ 733              		.cfi_endproc
+ 734              	.LFE74:
+ 736              		.section	.text.tare,"ax",%progbits
+ 737              		.align	1
+ 738              		.global	tare
+ 739              		.syntax unified
+ 740              		.thumb
+ 741              		.thumb_func
+ 742              		.fpu softvfp
+ 744              	tare:
+ 745              	.LVL60:
+ 746              	.LFB75:
+ 149:Core/common/drivers/hx711.c **** 
+ 150:Core/common/drivers/hx711.c **** //############################################################################################
+ 151:Core/common/drivers/hx711.c **** void tare(hx711_t *hx711, uint8_t times, uint8_t channel) {
+ 747              		.loc 1 151 59 is_stmt 1 view -0
+ 748              		.cfi_startproc
+ 749              		@ args = 0, pretend = 0, frame = 0
+ 750              		@ frame_needed = 0, uses_anonymous_args = 0
+ 751              		.loc 1 151 59 is_stmt 0 view .LVU197
+ 752 0000 70B5     		push	{r4, r5, r6, lr}
+ 753              	.LCFI12:
+ 754              		.cfi_def_cfa_offset 16
+ 755              		.cfi_offset 4, -16
+ 756              		.cfi_offset 5, -12
+ 757              		.cfi_offset 6, -8
+ 758              		.cfi_offset 14, -4
+ 759 0002 0546     		mov	r5, r0
+ 760 0004 0E46     		mov	r6, r1
+ 761 0006 1446     		mov	r4, r2
+ 152:Core/common/drivers/hx711.c **** 	read(hx711, channel); // Change channel
+ 762              		.loc 1 152 2 is_stmt 1 view .LVU198
+ 763 0008 1146     		mov	r1, r2
+ 764              	.LVL61:
+ 765              		.loc 1 152 2 is_stmt 0 view .LVU199
+ 766 000a FFF7FEFF 		bl	read
+ 767              	.LVL62:
+ 153:Core/common/drivers/hx711.c **** 	double sum = read_average(hx711, times, channel);
+ 768              		.loc 1 153 2 is_stmt 1 view .LVU200
+ 769              		.loc 1 153 15 is_stmt 0 view .LVU201
+ 770 000e 2246     		mov	r2, r4
+ARM GAS  /tmp/ccWHBv4Z.s 			page 20
+
+
+ 771 0010 71B2     		sxtb	r1, r6
+ 772 0012 2846     		mov	r0, r5
+ 773 0014 FFF7FEFF 		bl	read_average
+ 774              	.LVL63:
+ 775 0018 0146     		mov	r1, r0
+ 776              	.LVL64:
+ 154:Core/common/drivers/hx711.c **** 	set_offset(hx711, sum, channel);
+ 777              		.loc 1 154 2 is_stmt 1 view .LVU202
+ 778 001a 2246     		mov	r2, r4
+ 779 001c 2846     		mov	r0, r5
+ 780              	.LVL65:
+ 781              		.loc 1 154 2 is_stmt 0 view .LVU203
+ 782 001e FFF7FEFF 		bl	set_offset
+ 783              	.LVL66:
+ 155:Core/common/drivers/hx711.c **** }
+ 784              		.loc 1 155 1 view .LVU204
+ 785 0022 70BD     		pop	{r4, r5, r6, pc}
+ 786              		.loc 1 155 1 view .LVU205
+ 787              		.cfi_endproc
+ 788              	.LFE75:
+ 790              		.section	.text.tare_all,"ax",%progbits
+ 791              		.align	1
+ 792              		.global	tare_all
+ 793              		.syntax unified
+ 794              		.thumb
+ 795              		.thumb_func
+ 796              		.fpu softvfp
+ 798              	tare_all:
+ 799              	.LVL67:
+ 800              	.LFB76:
+ 156:Core/common/drivers/hx711.c **** 
+ 157:Core/common/drivers/hx711.c **** //############################################################################################
+ 158:Core/common/drivers/hx711.c **** void tare_all(hx711_t *hx711, uint8_t times) {
+ 801              		.loc 1 158 46 is_stmt 1 view -0
+ 802              		.cfi_startproc
+ 803              		@ args = 0, pretend = 0, frame = 0
+ 804              		@ frame_needed = 0, uses_anonymous_args = 0
+ 805              		.loc 1 158 46 is_stmt 0 view .LVU207
+ 806 0000 38B5     		push	{r3, r4, r5, lr}
+ 807              	.LCFI13:
+ 808              		.cfi_def_cfa_offset 16
+ 809              		.cfi_offset 3, -16
+ 810              		.cfi_offset 4, -12
+ 811              		.cfi_offset 5, -8
+ 812              		.cfi_offset 14, -4
+ 813 0002 0446     		mov	r4, r0
+ 814 0004 0D46     		mov	r5, r1
+ 159:Core/common/drivers/hx711.c **** 	tare(hx711, times, CHANNEL_A);
+ 815              		.loc 1 159 2 is_stmt 1 view .LVU208
+ 816 0006 0022     		movs	r2, #0
+ 817 0008 FFF7FEFF 		bl	tare
+ 818              	.LVL68:
+ 160:Core/common/drivers/hx711.c **** 	tare(hx711, times, CHANNEL_B);
+ 819              		.loc 1 160 2 view .LVU209
+ 820 000c 0122     		movs	r2, #1
+ 821 000e 2946     		mov	r1, r5
+ 822 0010 2046     		mov	r0, r4
+ARM GAS  /tmp/ccWHBv4Z.s 			page 21
+
+
+ 823 0012 FFF7FEFF 		bl	tare
+ 824              	.LVL69:
+ 161:Core/common/drivers/hx711.c **** }
+ 825              		.loc 1 161 1 is_stmt 0 view .LVU210
+ 826 0016 38BD     		pop	{r3, r4, r5, pc}
+ 827              		.loc 1 161 1 view .LVU211
+ 828              		.cfi_endproc
+ 829              	.LFE76:
+ 831              		.global	__aeabi_f2d
+ 832              		.global	__aeabi_ddiv
+ 833              		.global	__aeabi_d2f
+ 834              		.section	.text.get_weight,"ax",%progbits
+ 835              		.align	1
+ 836              		.global	get_weight
+ 837              		.syntax unified
+ 838              		.thumb
+ 839              		.thumb_func
+ 840              		.fpu softvfp
+ 842              	get_weight:
+ 843              	.LVL70:
+ 844              	.LFB77:
+ 162:Core/common/drivers/hx711.c **** 
+ 163:Core/common/drivers/hx711.c **** //############################################################################################
+ 164:Core/common/drivers/hx711.c **** float get_weight(hx711_t *hx711, int8_t times, uint8_t channel) {
+ 845              		.loc 1 164 65 is_stmt 1 view -0
+ 846              		.cfi_startproc
+ 847              		@ args = 0, pretend = 0, frame = 0
+ 848              		@ frame_needed = 0, uses_anonymous_args = 0
+ 849              		.loc 1 164 65 is_stmt 0 view .LVU213
+ 850 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 851              	.LCFI14:
+ 852              		.cfi_def_cfa_offset 24
+ 853              		.cfi_offset 3, -24
+ 854              		.cfi_offset 4, -20
+ 855              		.cfi_offset 5, -16
+ 856              		.cfi_offset 6, -12
+ 857              		.cfi_offset 7, -8
+ 858              		.cfi_offset 14, -4
+ 859 0002 0546     		mov	r5, r0
+ 860 0004 0E46     		mov	r6, r1
+ 861 0006 1446     		mov	r4, r2
+ 165:Core/common/drivers/hx711.c ****   // Read load cell
+ 166:Core/common/drivers/hx711.c **** 	read(hx711, channel);
+ 862              		.loc 1 166 2 is_stmt 1 view .LVU214
+ 863 0008 1146     		mov	r1, r2
+ 864              	.LVL71:
+ 865              		.loc 1 166 2 is_stmt 0 view .LVU215
+ 866 000a FFF7FEFF 		bl	read
+ 867              	.LVL72:
+ 167:Core/common/drivers/hx711.c **** 	float scale = 0;
+ 868              		.loc 1 167 2 is_stmt 1 view .LVU216
+ 168:Core/common/drivers/hx711.c **** 	if(channel == CHANNEL_A) scale = hx711->Ascale;
+ 869              		.loc 1 168 2 view .LVU217
+ 870              		.loc 1 168 4 is_stmt 0 view .LVU218
+ 871 000e 9CB9     		cbnz	r4, .L49
+ 872              		.loc 1 168 27 is_stmt 1 discriminator 1 view .LVU219
+ 873              		.loc 1 168 33 is_stmt 0 discriminator 1 view .LVU220
+ARM GAS  /tmp/ccWHBv4Z.s 			page 22
+
+
+ 874 0010 2F69     		ldr	r7, [r5, #16]	@ float
+ 875              	.LVL73:
+ 876              	.L50:
+ 169:Core/common/drivers/hx711.c **** 	else scale = hx711->Bscale;
+ 170:Core/common/drivers/hx711.c **** 	return get_value(hx711, times, channel) / scale;
+ 877              		.loc 1 170 2 is_stmt 1 view .LVU221
+ 878              		.loc 1 170 9 is_stmt 0 view .LVU222
+ 879 0012 2246     		mov	r2, r4
+ 880 0014 3146     		mov	r1, r6
+ 881 0016 2846     		mov	r0, r5
+ 882 0018 FFF7FEFF 		bl	get_value
+ 883              	.LVL74:
+ 884 001c 0446     		mov	r4, r0
+ 885 001e 0D46     		mov	r5, r1
+ 886              	.LVL75:
+ 887              		.loc 1 170 42 view .LVU223
+ 888 0020 3846     		mov	r0, r7
+ 889 0022 FFF7FEFF 		bl	__aeabi_f2d
+ 890              	.LVL76:
+ 891 0026 0246     		mov	r2, r0
+ 892 0028 0B46     		mov	r3, r1
+ 893 002a 2046     		mov	r0, r4
+ 894 002c 2946     		mov	r1, r5
+ 895 002e FFF7FEFF 		bl	__aeabi_ddiv
+ 896              	.LVL77:
+ 897 0032 FFF7FEFF 		bl	__aeabi_d2f
+ 898              	.LVL78:
+ 171:Core/common/drivers/hx711.c **** }
+ 899              		.loc 1 171 1 view .LVU224
+ 900 0036 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 901              	.LVL79:
+ 902              	.L49:
+ 169:Core/common/drivers/hx711.c **** 	else scale = hx711->Bscale;
+ 903              		.loc 1 169 7 is_stmt 1 view .LVU225
+ 169:Core/common/drivers/hx711.c **** 	else scale = hx711->Bscale;
+ 904              		.loc 1 169 13 is_stmt 0 view .LVU226
+ 905 0038 EF69     		ldr	r7, [r5, #28]	@ float
+ 906              	.LVL80:
+ 169:Core/common/drivers/hx711.c **** 	else scale = hx711->Bscale;
+ 907              		.loc 1 169 13 view .LVU227
+ 908 003a EAE7     		b	.L50
+ 909              		.cfi_endproc
+ 910              	.LFE77:
+ 912              		.section	.rodata
+ 913              		.align	2
+ 914              		.set	.LANCHOR0,. + 0
+ 915              	.LC0:
+ 916 0000 0000     		.ascii	"\000\000"
+ 917 0002 00       		.space	1
+ 918              		.text
+ 919              	.Letext0:
+ 920              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 921              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 922              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 923              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 924              		.file 7 "Core/common/drivers/hx711.h"
+ 925              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  /tmp/ccWHBv4Z.s 			page 23
+
+
+ARM GAS  /tmp/ccWHBv4Z.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 hx711.c
+     /tmp/ccWHBv4Z.s:16     .text.hx711_init:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:24     .text.hx711_init:0000000000000000 hx711_init
+     /tmp/ccWHBv4Z.s:116    .text.set_scale:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:123    .text.set_scale:0000000000000000 set_scale
+     /tmp/ccWHBv4Z.s:143    .text.set_gain:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:150    .text.set_gain:0000000000000000 set_gain
+     /tmp/ccWHBv4Z.s:186    .text.set_offset:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:193    .text.set_offset:0000000000000000 set_offset
+     /tmp/ccWHBv4Z.s:218    .text.shiftIn:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:225    .text.shiftIn:0000000000000000 shiftIn
+     /tmp/ccWHBv4Z.s:322    .text.is_ready:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:329    .text.is_ready:0000000000000000 is_ready
+     /tmp/ccWHBv4Z.s:365    .text.wait_ready:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:372    .text.wait_ready:0000000000000000 wait_ready
+     /tmp/ccWHBv4Z.s:411    .text.read:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:418    .text.read:0000000000000000 read
+     /tmp/ccWHBv4Z.s:602    .text.read:0000000000000094 $d
+     /tmp/ccWHBv4Z.s:607    .text.read_average:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:614    .text.read_average:0000000000000000 read_average
+     /tmp/ccWHBv4Z.s:685    .text.get_value:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:692    .text.get_value:0000000000000000 get_value
+     /tmp/ccWHBv4Z.s:737    .text.tare:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:744    .text.tare:0000000000000000 tare
+     /tmp/ccWHBv4Z.s:791    .text.tare_all:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:798    .text.tare_all:0000000000000000 tare_all
+     /tmp/ccWHBv4Z.s:835    .text.get_weight:0000000000000000 $t
+     /tmp/ccWHBv4Z.s:842    .text.get_weight:0000000000000000 get_weight
+     /tmp/ccWHBv4Z.s:913    .rodata:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_GPIO_ReadPin
+HAL_GPIO_WritePin
+HAL_Delay
+__aeabi_i2d
+__aeabi_f2d
+__aeabi_ddiv
+__aeabi_d2f

@@ -1,0 +1,24 @@
+{
+    "[c]": {
+        "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+    },
+    "clang-format.language.c.fallbackStyle": "google",
+    "clang-format.language.c.style": "file",
+    "clang-format.language.cpp.style": "file",
+    "clang-format.language.cpp.fallbackStyle": "google",
+    "cmake.configureOnOpen": true,
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cortex-debug.armToolchainPath": "/usr/lib/arm-none-eabi/bin",
+    "cortex-debug.gdbPath": "/usr/bin/arm-none-eabi-gdb",
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "files.associations": {
+        "functional": "cpp",
+        "main.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "telem.h": "c",
+        "stm32f1xx_hal_uart.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": false
+}
