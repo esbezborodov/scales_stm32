@@ -11,7 +11,7 @@
             "servertype": "stutil",
             "preLaunchTask" : "Build",
             "preRestartCommands" : [ "load", "enable breakpoint", "monitor reset" ],
-            "showDevDebugOutput" : "raw",
+            "showDevDebugOutput" : "false",
             "svdFile" : "${workspaceRoot}/debug_files/STM32F103.svd",
             "configFiles": [
                 "${workspaceRoot}/debug_files/stlink-dap.cfg",

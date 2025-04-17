@@ -94,9 +94,9 @@ extern "C" {
 #define LCD_BACKLIGHT 0x08
 #define LCD_NOBACKLIGHT 0x00
 
-#define BIT_EN 0b00000100  // Enable bit
-#define BIT_RW 0b00000010  // Read/Write bit
-#define BIT_RS 0b00000001  // Register select bit
+#define BIT_EN 0b00000100  // Enable bit DEBUG 5
+#define BIT_RW 0b00000010  // Read/Write bit DEBUG 4
+#define BIT_RS 0b00000001  // Register select bit DEBUG 3
 
 /**
  * @brief  LCD_I2C working struct
@@ -112,51 +112,6 @@ typedef struct {
     uint8_t cols;
     uint8_t rows;
 } LCD_I2C_t;
-
-
-
-/* To enable this function define USE_I2C_SCAN 
-that's why the body of the function is placed here */
-#ifdef USE_I2C_SCAN
-#include <string.h>
-#include <stdio.h>
-
-/**
- * This function scans the I2C bus and prints found devices to specified UART
- * @param *hi2c1 - handle to i2c
- * @param *huart - handle to uart
- */
-void I2C_Scan (I2C_HandleTypeDef *hi2c1, UART_HandleTypeDef *huart)
-{
-	error
-	// создание переменной, содержащей статус
-	HAL_StatusTypeDef res;                          
-	// сообщение о начале процедуры
-	char info[] = "Scanning I2C bus...\r\n";
-	// отправка сообщения по UART	
-	HAL_UART_Transmit(huart, (uint8_t *)info, strlen(info), HAL_MAX_DELAY);
-	
-	char msg[10];
-	// перебор всех возможных адресов
-	for(uint16_t i = 0; i < 128; i++)              
-	{
-		// проверяем, готово ли устройство по адресу i для связи
-		res = HAL_I2C_IsDeviceReady(hi2c1, i << 1, 1, HAL_MAX_DELAY);                   
-	    // если да, то
-		if(res == HAL_OK)                              
-	    {
-	    	// запись адреса i, на который откликнулись, в строку в виде 
-			// 16тиричного значения:
-	    	sprintf(msg, "0x%02X\r\n", i);
-	    	// отправка номера откликнувшегося адреса
-			HAL_UART_Transmit(huart, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
-	    }
-	}
-	char finished[] = "Finished\r\n";
-	// отправка сообщения по UART	
-	HAL_UART_Transmit(huart, (uint8_t *)finished, strlen(finished), HAL_MAX_DELAY);
-}
-#endif
 
 //Прототипы
 ///Инициализация дисплея, его очистка
@@ -216,6 +171,10 @@ void LCD_SetCursor(LCD_I2C_t *lcd_i2c, uint8_t col, uint8_t row);
  * @par str - pointer to string
  */
 void LCD_SendString(LCD_I2C_t *lcd_i2c, const char *str);
+
+#ifdef USE_I2C_SCAN
+void I2C_Scan (I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart);
+#endif
 
 /* C++ detection */
 #ifdef __cplusplus

@@ -154,3 +154,42 @@ uint8_t LCD_send(LCD_I2C_t *lcd_i2c, uint8_t data, uint8_t flags)
 	if (res == HAL_OK) return 1;
 	else return 0;
 }
+
+/* To enable this function define USE_I2C_SCAN 
+that's why the body of the function is placed here */
+#ifdef USE_I2C_SCAN
+
+/**
+ * This function scans the I2C bus and prints found devices to specified UART
+ * @param *hi2c - handle to i2c
+ * @param *huart - handle to uart
+ */
+void I2C_Scan (I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart)
+{
+	HAL_StatusTypeDef res;                          
+	// сообщение о начале процедуры
+	char info[] = "Scanning I2C bus...\r\n";
+	// отправка сообщения по UART	
+	HAL_UART_Transmit(huart, (uint8_t *)info, strlen(info), HAL_MAX_DELAY);
+	
+	char msg[10];
+	// перебор всех возможных адресов
+	for(uint16_t i = 0; i < 128; i++)              
+	{
+		// проверяем, готово ли устройство по адресу i для связи
+		res = HAL_I2C_IsDeviceReady(hi2c, i << 1, 1, HAL_MAX_DELAY);                   
+	    // если да, то
+		if(res == HAL_OK)                              
+	    {
+	    	// запись адреса i, на который откликнулись, в строку в виде 
+			// 16тиричного значения:
+	    	sprintf(msg, "0x%02X\r\n", i);
+	    	// отправка номера откликнувшегося адреса
+			HAL_UART_Transmit(huart, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
+	    }
+	}
+	char finished[] = "Finished\r\n";
+	// отправка сообщения по UART	
+	HAL_UART_Transmit(huart, (uint8_t *)finished, strlen(finished), HAL_MAX_DELAY);
+}
+#endif
