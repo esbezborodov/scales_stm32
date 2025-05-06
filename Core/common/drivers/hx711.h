@@ -1,22 +1,33 @@
+#ifndef HX711_H_
+#define HX711_H_
+
+
 /*
- * HX711.h
- *
- *  Created on: 16 nov. 2021
- *      Author: PCov3r
- */
+  Author:     Nima Askari
+  WebSite:    http://www.github.com/NimaLTD
+  Instagram:  http://instagram.com/github.NimaLTD
+  Youtube:    https://www.youtube.com/channel/UCUhY7qY1klJm1d2kulr9ckw
+  
+  Version:    1.1.1
+  
+  
+  Reversion History:
+  
+  (1.1.1):
+    Add power down/up.
+  (1.1.0):
+    Add structure, Add calibration, Add weight, change names, ...
+  (1.0.0):
+    First Release.
+*/
 
-#ifndef APPLICATION_CORE_HX711_H_
-#define APPLICATION_CORE_HX711_H_
-
-#include "stdint.h"
-#include "stdbool.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+  
 #include "main.h"
-#include "stm32f1xx_hal_gpio.h"
 
-#define CHANNEL_A 0
-#define CHANNEL_B 1
-#define interrupts() __enable_irq()
-#define noInterrupts() __disable_irq()
+//####################################################################################################################
 
 typedef struct
 {
@@ -24,33 +35,30 @@ typedef struct
   GPIO_TypeDef  *dat_gpio;
   uint16_t      clk_pin;
   uint16_t      dat_pin;
-  long       	Aoffset;
-  float         Ascale;
-  uint8_t		Again;
-  long       	Boffset;
-  float         Bscale;
-  uint8_t		Bgain;
+  int32_t       offset;
+  float         coef;
+  uint8_t       lock;    
   
 }hx711_t;
 
-/* Setup functions */
-void hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_TypeDef *dat_gpio, uint16_t dat_pin);
-void set_scale(hx711_t *hx711, float Ascale, float Bscale);
-void set_gain(hx711_t *hx711, uint8_t Again, uint8_t Bgain);
+//####################################################################################################################
 
-/* Load cell reading functions */
-void tare(hx711_t *hx711, uint8_t times, uint8_t channel);
-void tare_all(hx711_t *hx711, uint8_t times);
-float get_weight(hx711_t *hx711, int8_t times, uint8_t channel);
+void        hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_TypeDef *dat_gpio, uint16_t dat_pin);
+int32_t     hx711_value(hx711_t *hx711);
+int32_t     hx711_value_ave(hx711_t *hx711, uint16_t sample);
 
-/* Others */
-void set_offset(hx711_t *hx711, long offset, uint8_t channel);
-uint8_t shiftIn(hx711_t *hx711, uint8_t bit_count);
-bool is_ready(hx711_t *hx711);
-void wait_ready(hx711_t *hx711);
-long read(hx711_t *hx711, uint8_t channel);
-long read_average(hx711_t *hx711, int8_t times, uint8_t channel);
-double get_value(hx711_t *hx711, int8_t times, uint8_t channel);
+void        hx711_coef_set(hx711_t *hx711, float coef);
+float       hx711_coef_get(hx711_t *hx711);
+void        hx711_calibration(hx711_t *hx711, int32_t value_noload, int32_t value_load, float scale);
+void        hx711_tare(hx711_t *hx711, uint16_t sample);
+float       hx711_weight(hx711_t *hx711, uint16_t sample);
+void        hx711_power_down(hx711_t *hx711);
+void        hx711_power_up(hx711_t *hx711);
 
+//####################################################################################################################
 
-#endif /* APPLICATION_CORE_HX711_H_ */
+#ifdef __cplusplus
+}
+#endif
+
+#endif 

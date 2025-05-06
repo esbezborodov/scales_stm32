@@ -1,20 +1,43 @@
-/*
- * HX711.c
- *
- *  Created on: 16 nov. 2021
- *      Author: PCov3r
- */
-
 #include "hx711.h"
+#include "hx711Config.h"
+#if (_HX711_USE_FREERTOS == 1)
+#include "cmsis_os.h"
+#define hx711_delay(x)    osDelay(x)
+#else
+#define hx711_delay(x)    HAL_Delay(x)
+#endif
 
 //#############################################################################################
-void hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_TypeDef *dat_gpio, uint16_t dat_pin){
-  // Setup the pin connections with the STM Board
+void hx711_delay_us(void)
+{
+  uint32_t delay = _HX711_DELAY_US_LOOP;
+  while (delay > 0)
+  {
+    delay--;
+	HAL_Delay(1);
+  }
+}
+//#############################################################################################
+void hx711_lock(hx711_t *hx711)
+{
+  while (hx711->lock)
+    hx711_delay(1);
+  hx711->lock = 1;      
+}
+//#############################################################################################
+void hx711_unlock(hx711_t *hx711)
+{
+  hx711->lock = 0;
+}
+//#############################################################################################
+void hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_TypeDef *dat_gpio, uint16_t dat_pin)
+{
+  hx711_lock(hx711);
   hx711->clk_gpio = clk_gpio;
   hx711->clk_pin = clk_pin;
   hx711->dat_gpio = dat_gpio;
   hx711->dat_pin = dat_pin;
-
+  
   GPIO_InitTypeDef  gpio = {0};
   gpio.Mode = GPIO_MODE_OUTPUT_PP;
   gpio.Pull = GPIO_NOPULL;
@@ -26,146 +49,112 @@ void hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_T
   gpio.Speed = GPIO_SPEED_FREQ_HIGH;
   gpio.Pin = dat_pin;
   HAL_GPIO_Init(dat_gpio, &gpio);
-
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_SET);
+  hx711_delay(10);
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_RESET);
+  hx711_delay(10);  
+  hx711_value(hx711);
+  hx711_value(hx711);
+  hx711_unlock(hx711); 
 }
-
 //#############################################################################################
-void set_scale(hx711_t *hx711, float Ascale, float Bscale){
-  // Set the scale. To calibrate the cell, run the program with a scale of 1, call the tare function and then the get_units function. 
-  // Divide the obtained weight by the real weight. The result is the parameter to pass to scale
-	hx711->Ascale = Ascale;
-	hx711->Bscale = Bscale;
+int32_t hx711_value(hx711_t *hx711)
+{
+  uint32_t data = 0;
+  uint32_t  startTime = HAL_GetTick();
+  while(HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) == GPIO_PIN_SET)
+  {
+    hx711_delay(1);
+    if(HAL_GetTick() - startTime > 150)
+      return 0;
+  }
+  for(int8_t i=0; i<24 ; i++)
+  {
+    HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_SET);   
+    hx711_delay_us();
+    HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_RESET);
+    hx711_delay_us();
+    data = data << 1;    
+    if(HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) == GPIO_PIN_SET)
+      data ++;
+  }
+  data = data ^ 0x800000; 
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_SET);   
+  hx711_delay_us();
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_RESET);
+  hx711_delay_us();
+  return data;    
 }
-
 //#############################################################################################
-void set_gain(hx711_t *hx711, uint8_t Again, uint8_t Bgain){
-  // Define A channel's gain
-	switch (Again) {
-			case 128:		// channel A, gain factor 128
-				hx711->Again = 1;
-				break;
-			case 64:		// channel A, gain factor 64
-				hx711->Again = 3;
-				break;
-		}
-	hx711->Bgain = 2;
+int32_t hx711_value_ave(hx711_t *hx711, uint16_t sample)
+{
+  hx711_lock(hx711);
+  int64_t  ave = 0;
+  for(uint16_t i=0 ; i<sample ; i++)
+  {
+    ave += hx711_value(hx711);
+    hx711_delay(5);
+  }
+  int32_t answer = (int32_t)(ave / sample);
+  hx711_unlock(hx711);
+  return answer;
 }
-
 //#############################################################################################
-void set_offset(hx711_t *hx711, long offset, uint8_t channel){
-	if(channel == CHANNEL_A) hx711->Aoffset = offset;
-	else hx711->Boffset = offset;
+void hx711_tare(hx711_t *hx711, uint16_t sample)
+{
+  hx711_lock(hx711);
+  int64_t  ave = 0;
+  for(uint16_t i=0 ; i<sample ; i++)
+  {
+    ave += hx711_value(hx711);
+    hx711_delay(5);
+  }
+  hx711->offset = (int32_t)(ave / sample);
+  hx711_unlock(hx711);
 }
-
-//############################################################################################
-uint8_t shiftIn(hx711_t *hx711, uint8_t bitOrder) {
-    uint8_t value = 0;
-    uint8_t i;
-
-    for(i = 0; i < 8; ++i) {
-    	HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
-        if(bitOrder == 0)
-            value |= HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) << i;
-        else
-            value |= HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) << (7 - i);
-        HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, RESET);
-    }
-    return value;
+//#############################################################################################
+void hx711_calibration(hx711_t *hx711, int32_t noload_raw, int32_t load_raw, float scale)
+{
+  hx711_lock(hx711);
+  hx711->offset = noload_raw;
+  hx711->coef = (load_raw - noload_raw) / scale;  
+  hx711_unlock(hx711);
 }
-
-//############################################################################################
-bool is_ready(hx711_t *hx711) {
-	if(HAL_GPIO_ReadPin(hx711->dat_gpio, hx711->dat_pin) == GPIO_PIN_RESET){
-		return 1;
-	}
-	return 0;
+//#############################################################################################
+float hx711_weight(hx711_t *hx711, uint16_t sample)
+{
+  hx711_lock(hx711);
+  int64_t  ave = 0;
+  for(uint16_t i=0 ; i<sample ; i++)
+  {
+    ave += hx711_value(hx711);
+    hx711_delay(5);
+  }
+  int32_t data = (int32_t)(ave / sample);
+  float answer =  (data - hx711->offset) / hx711->coef;
+  hx711_unlock(hx711);
+  return answer;
 }
-
-//############################################################################################
-void wait_ready(hx711_t *hx711) {
-	// Wait for the chip to become ready.
-	while (!is_ready(hx711)) {
-		HAL_Delay(0);
-	}
+//#############################################################################################
+void hx711_coef_set(hx711_t *hx711, float coef)
+{
+  hx711->coef = coef;  
 }
-
-//############################################################################################
-long read(hx711_t *hx711, uint8_t channel){
-	wait_ready(hx711);
-	unsigned long value = 0;
-	uint8_t data[3] = { 0 };
-	uint8_t filler = 0x00;
-
-	noInterrupts();
-
-	data[2] = shiftIn(hx711, 1);
-	data[1] = shiftIn(hx711, 1);
-	data[0] = shiftIn(hx711, 1);
-
-	uint8_t gain = 0;
-	if(channel == 0) gain = hx711->Again;
-	else gain = hx711->Bgain;
-
-	for (unsigned int i = 0; i < gain; i++) {
-		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, SET);
-		HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, RESET);
-	}
-
-	interrupts();
-
-	// Replicate the most significant bit to pad out a 32-bit signed integer
-	if (data[2] & 0x80) {
-		filler = 0xFF;
-	} else {
-		filler = 0x00;
-	}
-
-	// Construct a 32-bit signed integer
-	value = ( (unsigned long)(filler) << 24
-			| (unsigned long)(data[2]) << 16
-			| (unsigned long)(data[1]) << 8
-			| (unsigned long)(data[0]) );
-
-	return (long)(value);
+//#############################################################################################
+float hx711_coef_get(hx711_t *hx711)
+{
+  return hx711->coef;  
 }
-
-//############################################################################################
-long read_average(hx711_t *hx711, int8_t times, uint8_t channel) {
-	long sum = 0;
-	for (int8_t i = 0; i < times; i++) {
-		sum += read(hx711, channel);
-		HAL_Delay(0);
-	}
-	return sum / times;
+//#############################################################################################
+void hx711_power_down(hx711_t *hx711)
+{
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_SET);
+  hx711_delay(1);  
 }
-
-//############################################################################################
-double get_value(hx711_t *hx711, int8_t times, uint8_t channel) {
-	long offset = 0;
-	if(channel == CHANNEL_A) offset = hx711->Aoffset;
-	else offset = hx711->Boffset;
-	return read_average(hx711, times, channel) - offset;
+//#############################################################################################
+void hx711_power_up(hx711_t *hx711)
+{
+  HAL_GPIO_WritePin(hx711->clk_gpio, hx711->clk_pin, GPIO_PIN_RESET);
 }
-
-//############################################################################################
-void tare(hx711_t *hx711, uint8_t times, uint8_t channel) {
-	read(hx711, channel); // Change channel
-	double sum = read_average(hx711, times, channel);
-	set_offset(hx711, sum, channel);
-}
-
-//############################################################################################
-void tare_all(hx711_t *hx711, uint8_t times) {
-	tare(hx711, times, CHANNEL_A);
-	tare(hx711, times, CHANNEL_B);
-}
-
-//############################################################################################
-float get_weight(hx711_t *hx711, int8_t times, uint8_t channel) {
-  // Read load cell
-	read(hx711, channel);
-	float scale = 0;
-	if(channel == CHANNEL_A) scale = hx711->Ascale;
-	else scale = hx711->Bscale;
-	return get_value(hx711, times, channel) / scale;
-}
+//#############################################################################################

@@ -172,6 +172,8 @@ void LCD_SetCursor(LCD_I2C_t *lcd_i2c, uint8_t col, uint8_t row);
  */
 void LCD_SendString(LCD_I2C_t *lcd_i2c, const char *str);
 
+uint8_t LCD_send(LCD_I2C_t *lcd_i2c, uint8_t data, uint8_t flags);
+
 #ifdef USE_I2C_SCAN
 void I2C_Scan (I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart);
 #endif

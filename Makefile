@@ -37,11 +37,12 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Core/Src/main.c \
+Core/Src/leds.c \
 Core/Src/stm32f1xx_it.c \
 Core/Src/stm32f1xx_hal_msp.c \
 Core/common/drivers/hx711.c \
-Core/common/lcd_i2c.c \
-Core/common/dwt_delay.c \
+Core/common/lcd_lib/lcd_i2c.c \
+Core/common/delay_lib/dwt_delay.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
@@ -117,14 +118,16 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
 -ICore/common/drivers \
+-ICore/common/delay_lib \
+-ICore/common/lcd_lib \
 -ICore/common 
-# -ICore/common/lcd_i2c.h
-# -ICore/common/lcd_i2c.h# -ICore/common/lcd_i2c.h# -ICore/common/lcd_i2c.h# -ICore/common/lcd_i2c.h# -ICore/common/lcd_i2c.h# -ICore/common/lcd_i2c.h
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
 CFLAGS += $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+
+# CFLAGS += -u _printf_float
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2

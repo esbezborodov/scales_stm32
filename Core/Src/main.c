@@ -26,6 +26,10 @@
 #include "dwt_delay.h"
 #include "lcd_i2c.h"
 #include "stm32f1xx_hal_uart.h"
+#include "math.h"
+#include "leds.h"
+#include "leds_module.h" 
+#include "hx711.h" 
 
 /* USER CODE END Includes */
 
@@ -36,12 +40,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
-// #define PIN_RS    (1 << 0)
-// #define PIN_EN    (1 << 2)
-// #define BACKLIGHT (1 << 3)
-// #define LCD_DELAY_MS 5
-// #define LCD_ADDR (0x27 << 1)
 
 /* USER CODE END PD */
 
@@ -55,6 +53,12 @@ I2C_HandleTypeDef hi2c2;
 
 /* USER CODE BEGIN PV */
 LCD_I2C_t lcd;
+float_t data;
+led_t leds[NUM_LEDS];
+hx711_t loadcell;
+
+float weight = 0.0;
+char buffer[20];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,13 +71,6 @@ static void MX_I2C2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-// HAL_StatusTypeDef LCD_SendInternal(uint8_t lcd_addr, uint8_t data, uint8_t flags);
-// void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd);
-// void LCD_SendData(uint8_t lcd_addr, uint8_t data);
-// void LCD_Init(uint8_t lcd_addr);
-// void LCD_SendString(uint8_t lcd_addr, char *str);
-// void init();
-// void loop();
 
 /* USER CODE END 0 */
 
@@ -107,26 +104,37 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C2_Init();
-  // init();
   /* USER CODE BEGIN 2 */
   DWT_Delay_Init();
   LCD_Init(&lcd, &hi2c2, 0x27, 16, 2);
   LCD_Backlight(&lcd, 1);
   LCD_Clear(&lcd);
-  LCD_SendString(&lcd, "Hello");
-  char msg[] =  " world!";
-  uint8_t counter = 0;
+  LCD_SetCursor(&hi2c2, 1, 1);
+  LCD_SendString(&hi2c2, "Scale:");
+  // LCD_SetCursor(&hi2c2, 1, 1);
+  leds_init(&leds);
+
+  hx711_init(&loadcell, GPIOB, GPIO_PIN_12, GPIOB, GPIO_PIN_13);
+  // hx711_coef_set(&loadcell, 354.5);
+  hx711_coef_set(&loadcell, 1);
+  hx711_tare(&loadcell, 10);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    LCD_SetCursor(&lcd, 0, 2);
-    LCD_SendString(&lcd, counter++);
-    DWT_Delay_ms(2000);
+    // weight = hx711_weight(&loadcell, 10);
+    weight += 1;
+    // leds_module_toogle(&leds, weight);
+    // data.intg = INTEGER_PART(weight);
+    // data.frac = FRACTIONAL_PART(weight);
+    // sprintf(buffer, "%d.%02d", data.intg, data.frac);
+    // sprintf(buffer, "%d", (int)weight);
+    // LCD_SendString(&lcd, buffer);
+    HAL_Delay(500);
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -234,17 +242,18 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB12 PB14 PB15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_15;
+  // GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_15; //Debug
+  GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB13 */
-  GPIO_InitStruct.Pin = GPIO_PIN_13;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  // GPIO_InitStruct.Pin = GPIO_PIN_13; //Debug
+  // GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  // GPIO_InitStruct.Pull = GPIO_NOPULL;
+  // HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   GPIO_InitStruct.Pin = GPIO_PIN_13;
@@ -255,74 +264,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-// HAL_StatusTypeDef LCD_SendInternal(uint8_t lcd_addr, uint8_t data,
-//                                    uint8_t flags) {
-//     HAL_StatusTypeDef res;
-//     for(;;) {
-//         res = HAL_I2C_IsDeviceReady(&hi2c2, lcd_addr, 1,
-//                                     HAL_MAX_DELAY);
-//         if(res == HAL_OK)
-//             break;
-//     }
-
-//     uint8_t up = data & 0xF0;
-//     uint8_t lo = (data << 4) & 0xF0;
-
-//     uint8_t data_arr[4];
-//     data_arr[0] = up|flags|BACKLIGHT|PIN_EN;
-//     data_arr[1] = up|flags|BACKLIGHT;
-//     data_arr[2] = lo|flags|BACKLIGHT|PIN_EN;
-//     data_arr[3] = lo|flags|BACKLIGHT;
-
-//     res = HAL_I2C_Master_Transmit(&hi2c2, lcd_addr, data_arr,
-//                                   sizeof(data_arr), HAL_MAX_DELAY);
-//     HAL_Delay(LCD_DELAY_MS);
-//     return res;
-// }
-
-// void LCD_SendCommand(uint8_t lcd_addr, uint8_t cmd) {
-//     LCD_SendInternal(lcd_addr, cmd, 0);
-// }
-
-// void LCD_SendData(uint8_t lcd_addr, uint8_t data) {
-//     LCD_SendInternal(lcd_addr, data, PIN_RS);
-// }
-
-// void LCD_Init(uint8_t lcd_addr) {
-//     // 4-bit mode, 2 lines, 5x7 format
-//     LCD_SendCommand(lcd_addr, 0b00110000);
-//     // display & cursor home (keep this!)
-//     LCD_SendCommand(lcd_addr, 0b00000010);
-//     // display on, right shift, underline off, blink off
-//     LCD_SendCommand(lcd_addr, 0b00001100);
-//     // clear display (optional here)
-//     LCD_SendCommand(lcd_addr, 0b00000001);
-// }
-
-// void LCD_SendString(uint8_t lcd_addr, char *str) {
-//     while(*str) {
-//         LCD_SendData(lcd_addr, (uint8_t)(*str));
-//         str++;
-//     }
-// }
-
-// void init() {
-//     LCD_Init(LCD_ADDR);
-
-//     // set address to 0x00
-//     LCD_SendCommand(LCD_ADDR, 0b10000000);
-//     LCD_SendString(LCD_ADDR, " Using 1602 LCD");
-
-//     // set address to 0x40
-//     LCD_SendCommand(LCD_ADDR, 0b11000000);
-//     LCD_SendString(LCD_ADDR, "  over I2C bus");
-// }
-
-// void loop() {
-//     HAL_Delay(100);
-// }
-
 /* USER CODE END 4 */
 
 /**
