@@ -1,5 +1,6 @@
 #include "hx711.h"
 #include "hx711Config.h"
+#include "stm32f1xx.h"
 #if (_HX711_USE_FREERTOS == 1)
 #include "cmsis_os.h"
 #define hx711_delay(x)    osDelay(x)
@@ -14,7 +15,7 @@ void hx711_delay_us(void)
   while (delay > 0)
   {
     delay--;
-	HAL_Delay(1);
+	  __NOP(); __NOP(); __NOP(); __NOP(); 
   }
 }
 //#############################################################################################
@@ -116,8 +117,8 @@ void hx711_tare(hx711_t *hx711, uint16_t sample)
 void hx711_calibration(hx711_t *hx711, int32_t noload_raw, int32_t load_raw, float scale)
 {
   hx711_lock(hx711);
-  hx711->offset = noload_raw;
-  hx711->coef = (load_raw - noload_raw) / scale;  
+  hx711->coef = (load_raw - noload_raw) / scale;
+  hx711->offset = (int32_t)(22.85 * (hx711_coef_get(hx711))); //Debug code
   hx711_unlock(hx711);
 }
 //#############################################################################################

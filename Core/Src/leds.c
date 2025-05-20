@@ -24,10 +24,10 @@ void led_off(led_t* leds, leds_e led) {
 
 void leds_module_toogle(led_t* leds, float data) {
     _off_all_leds(leds);
-    if (0.0 < data < 1.25) led_on(leds, LED125);
-    if (1.26 < data < 2.50) led_on(leds, LED250);
-    if (2.51 < data < 3.75) led_on(leds, LED375);
-    if (3.76 < data < 5.00) led_on(leds, LED500);
+    if ((0.0 < data) && (data < 1.25)) led_on(leds, LED125);
+    if ((1.26 < data) && (data < 2.50)) led_on(leds, LED250);
+    if ((2.51 < data) && (data < 3.75)) led_on(leds, LED375);
+    if ((3.76) < data && (data < 5.00)) led_on(leds, LED500);
 }
 
 static void _init_led (led_t* leds, uint8_t num, GPIO_TypeDef* gpio, uint16_t pin) {
@@ -37,17 +37,15 @@ static void _init_led (led_t* leds, uint8_t num, GPIO_TypeDef* gpio, uint16_t pi
 }
 
 static void _off_all_leds(led_t* leds) {
-    int i = 0;
-    while (i < NUM_LEDS) {
-    HAL_GPIO_WritePin(leds[i].led_gpio, leds[i].led_pin, GPIO_PIN_RESET);
-    leds[i].state = 0;
+    for (int i = 0; i < NUM_LEDS; i++) {
+        HAL_GPIO_WritePin(leds[i].led_gpio, leds[i].led_pin, GPIO_PIN_RESET);
+        leds[i].state = 0;
     }
 }
 
 static void _on_all_leds(led_t* leds) {
-    int i = 0;
-    while (i < NUM_LEDS) {
-    HAL_GPIO_WritePin(leds[i].led_gpio, leds[i].led_pin, GPIO_PIN_SET);
-    leds[i].state = 1;
+    for (int i = 0; i < NUM_LEDS; i++) {
+        HAL_GPIO_WritePin(leds[i].led_gpio, leds[i].led_pin, GPIO_PIN_SET);
+        leds[i].state = 1;
     }
 }

@@ -105,36 +105,34 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
+  hx711_init(&loadcell, GPIOB, GPIO_PIN_12, GPIOB, GPIO_PIN_13);
+  hx711_tare(&loadcell, 10);
+  hx711_calibration(&loadcell, 798160, 355330, -1.15);
   DWT_Delay_Init();
   LCD_Init(&lcd, &hi2c2, 0x27, 16, 2);
   LCD_Backlight(&lcd, 1);
   LCD_Clear(&lcd);
-  LCD_SetCursor(&hi2c2, 1, 1);
-  LCD_SendString(&hi2c2, "Scale:");
-  // LCD_SetCursor(&hi2c2, 1, 1);
+  LCD_SendString(&lcd, "Scale:");
+
   leds_init(&leds);
-
-  hx711_init(&loadcell, GPIOB, GPIO_PIN_12, GPIOB, GPIO_PIN_13);
-  // hx711_coef_set(&loadcell, 354.5);
-  hx711_coef_set(&loadcell, 1);
-  hx711_tare(&loadcell, 10);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    // weight = hx711_weight(&loadcell, 10);
-    weight += 1;
-    // leds_module_toogle(&leds, weight);
-    // data.intg = INTEGER_PART(weight);
-    // data.frac = FRACTIONAL_PART(weight);
-    // sprintf(buffer, "%d.%02d", data.intg, data.frac);
-    // sprintf(buffer, "%d", (int)weight);
-    // LCD_SendString(&lcd, buffer);
-    HAL_Delay(500);
+    LCD_SetCursor(&lcd, 0, 1);
+    weight = hx711_weight(&loadcell, 1);
+    data.intg = integer_part(weight);
+    data.frac = fractional_part(weight);
+
+    sprintf(buffer, "%d.%02d", data.intg, data.frac);
+    LCD_SendString(&lcd, buffer);
+
+    leds_module_toogle(&leds, weight);
+    DWT_Delay_ms(250);
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -277,6 +275,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+    LCD_SendString(&lcd, "Error");
   }
   /* USER CODE END Error_Handler_Debug */
 }

@@ -4,14 +4,20 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#define INTEGER_PART(x) ((int)(x))
-#define FRACTIONAL_PART(x) ((int)((x - INTEGER_PART(x)) * 100))
-
+#define PRECISION (100)
 
 typedef struct {
-    uint8_t intg;
-    uint8_t frac;
+    int8_t intg;
+    int8_t frac;
 } float_t;
+
+static inline int8_t integer_part(float x) {
+    return (int8_t)x;
+}
+
+static inline int8_t fractional_part(float x) {
+    return (int8_t)((x - integer_part(x)) * PRECISION);
+}
 
 #endif /* MATH_H */
 
