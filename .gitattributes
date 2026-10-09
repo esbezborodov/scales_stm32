@@ -1,0 +1,6 @@
+# Project files use LF line endings.
+* text=auto eol=lf
+
+# Vendor code and SVD files are kept byte-identical to upstream.
+Drivers/** -text
+*.svd -text
