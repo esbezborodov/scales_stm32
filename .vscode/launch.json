@@ -1,23 +1,19 @@
-{    
+{
     "version": "0.2.0",
     "configurations": [
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceRoot}/build/scale_firmware.elf",
+            "executable": "${workspaceFolder}/build/scale_firmware.elf",
             "request": "launch",
             "type": "cortex-debug",
+            "servertype": "openocd",
             "runToEntryPoint": "main",
-            "servertype": "stutil",
-            "preLaunchTask" : "Build",
-            "preRestartCommands" : [ "load", "enable breakpoint", "monitor reset" ],
-            "showDevDebugOutput" : "false",
-            "svdFile" : "${workspaceRoot}/debug_files/STM32F103.svd",
+            "preLaunchTask": "Build",
+            "svdFile": "${workspaceFolder}/debug_files/STM32F103.svd",
             "configFiles": [
-                "${workspaceRoot}/debug_files/stlink-dap.cfg",
-                "${workspaceRoot}/stm32f1x.cfg"
+                "${workspaceFolder}/debug_files/openocd.cfg"
             ]
-        
         }
     ]
 }

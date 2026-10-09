@@ -1,3 +1,6 @@
-build
-debug_files
-vscode
+# Build output
+build/
+
+# Editor and OS files
+.vscode/settings.json
+.DS_Store
