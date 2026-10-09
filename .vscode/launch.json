@@ -4,7 +4,7 @@
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/scale_firmware.elf",
+            "executable": "${workspaceFolder}/build/debug/scale_firmware.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
