@@ -18,6 +18,18 @@
   */
 
 #include "main.h"
+#include "delay.h"
+
+/* The HAL time base is provided by the delay module (SysTick). */
+uint32_t HAL_GetTick(void)
+{
+  return delay_millis();
+}
+
+void HAL_Delay(uint32_t ms)
+{
+  delay_ms(ms);
+}
 
 void HAL_MspInit(void)
 {

@@ -56,7 +56,8 @@ target_compile_options(stm32f1_hal PRIVATE ${COMMON_OPTIONS})
 add_executable(${PROJECT_NAME}
     firmware/src/main.c
     firmware/src/leds.c
-    firmware/common/delay/dwt_delay.c
+    firmware/common/delay/delay.c
+    firmware/platform/clock.c
     firmware/common/hx711_drv/hx711.c
     firmware/common/lcd_drv/lcd_i2c.c
     firmware/platform/stm32f1xx_it.c

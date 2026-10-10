@@ -40,17 +40,16 @@ extern "C" {
  * If you want, you can redefine your own functions to 
  * delay micros and milliseconds.
  * 
- * This library use DWT_Delay.h by Khaled Magdy description: 
- * https://deepbluembedded.com/stm32-delay-microsecond-millisecond-utility-dwt-delay-timer-delay/
+ * Delays are provided by the project delay module (delay.h).
  * 
  * This library is based on https://habr.com/ru/post/501006/ and
  * https://github.com/FamNuven/STM32_1602-2004
  */
 
 #include "stm32f1xx_hal.h"
-#include "dwt_delay.h"
+#include "delay.h"
 
-#define DELAY_MS(x) DWT_Delay_ms(x)
+#define DELAY_MS(x) delay_ms(x)
 
 // commands
 #define LCD_CLEARDISPLAY 0x01

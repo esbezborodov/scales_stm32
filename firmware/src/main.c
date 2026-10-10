@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdint.h>
-#include "dwt_delay.h"
+#include "clock.h"
+#include "delay.h"
 #include "lcd_i2c.h"
 #include "number_parts.h"
 #include "leds.h"
@@ -17,14 +18,13 @@ hx711_t loadcell;
 float weight = 0.0;
 char buffer[20];
 
-void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C2_Init(void);
 
 int main(void)
 {
-  HAL_Init();
-  SystemClock_Config();
+  clock_init();
+  delay_init();
   MX_GPIO_Init();
   MX_I2C2_Init();
 
@@ -32,7 +32,6 @@ int main(void)
   hx711_tare(&loadcell, 10);
   hx711_calibration(&loadcell, 798160, 355330, -1.15);
 
-  DWT_Delay_Init();
   LCD_Init(&lcd, &hi2c2, 0x27, 16, 2);
   LCD_Backlight(&lcd, 1);
   LCD_Clear(&lcd);
@@ -52,46 +51,8 @@ int main(void)
     LCD_SendString(&lcd, buffer);
 
     leds_module_toggle(leds, weight);
-    DWT_Delay_ms(250);
+    delay_ms(250);
 
-  }
-}
-
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
-void SystemClock_Config(void)
-{
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI_DIV2;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL16;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
-  {
-    Error_Handler();
   }
 }
 
