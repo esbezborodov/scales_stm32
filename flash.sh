@@ -9,5 +9,5 @@ ELF="build/${PRESET}/scale_firmware.elf"
 
 ./build.sh "$PRESET"
 
-openocd -f debug_files/openocd.cfg \
+openocd -f firmware/debug/openocd.cfg \
     -c "program ${ELF} verify reset exit"

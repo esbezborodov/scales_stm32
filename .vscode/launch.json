@@ -10,9 +10,9 @@
             "servertype": "openocd",
             "runToEntryPoint": "main",
             "preLaunchTask": "Build",
-            "svdFile": "${workspaceFolder}/debug_files/STM32F103.svd",
+            "svdFile": "${workspaceFolder}/firmware/debug/STM32F103.svd",
             "configFiles": [
-                "${workspaceFolder}/debug_files/openocd.cfg"
+                "${workspaceFolder}/firmware/debug/openocd.cfg"
             ]
         }
     ]

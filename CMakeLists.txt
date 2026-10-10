@@ -16,7 +16,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 set(MCU_FLAGS -mcpu=cortex-m3 -mthumb -mfloat-abi=soft)
-set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/STM32F103XX_FLASH.ld)
+set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/firmware/platform/STM32F103C8TX_FLASH.ld)
 
 set(COMMON_DEFINITIONS USE_HAL_DRIVER STM32F103xB)
 set(COMMON_OPTIONS
@@ -28,7 +28,7 @@ set(COMMON_OPTIONS
 )
 
 # ST HAL is vendor code: build it separately, without project warnings.
-set(HAL_DIR Drivers/STM32F1xx_HAL_Driver/Src)
+set(HAL_DIR vendor/STM32F1xx_HAL_Driver/Src)
 add_library(stm32f1_hal STATIC
     ${HAL_DIR}/stm32f1xx_hal.c
     ${HAL_DIR}/stm32f1xx_hal_cortex.c
@@ -42,37 +42,35 @@ add_library(stm32f1_hal STATIC
     ${HAL_DIR}/stm32f1xx_hal_pwr.c
     ${HAL_DIR}/stm32f1xx_hal_rcc.c
     ${HAL_DIR}/stm32f1xx_hal_rcc_ex.c
-    Core/Src/system_stm32f1xx.c
+    firmware/platform/system_stm32f1xx.c
 )
 target_include_directories(stm32f1_hal SYSTEM PUBLIC
-    Core/Inc
-    Drivers/STM32F1xx_HAL_Driver/Inc
-    Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
-    Drivers/CMSIS/Device/ST/STM32F1xx/Include
-    Drivers/CMSIS/Include
+    firmware/platform
+    vendor/STM32F1xx_HAL_Driver/Inc
+    vendor/CMSIS/Device/ST/STM32F1xx/Include
+    vendor/CMSIS/Include
 )
 target_compile_definitions(stm32f1_hal PUBLIC ${COMMON_DEFINITIONS})
 target_compile_options(stm32f1_hal PRIVATE ${COMMON_OPTIONS})
 
 add_executable(${PROJECT_NAME}
-    Core/Src/main.c
-    Core/Src/leds.c
-    Core/Src/stm32f1xx_it.c
-    Core/Src/stm32f1xx_hal_msp.c
-    Core/common/drivers/hx711.c
-    Core/common/lcd_lib/lcd_i2c.c
-    Core/common/delay_lib/dwt_delay.c
-    startup_stm32f103xb.s
+    firmware/src/main.c
+    firmware/src/leds.c
+    firmware/common/delay/dwt_delay.c
+    firmware/common/hx711_drv/hx711.c
+    firmware/common/lcd_drv/lcd_i2c.c
+    firmware/platform/stm32f1xx_it.c
+    firmware/platform/stm32f1xx_hal_msp.c
+    firmware/platform/startup_stm32f103xb.s
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX .elf)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
-    Core/Inc
-    Core/common
-    Core/common/drivers
-    Core/common/delay_lib
-    Core/common/lcd_lib
+    firmware/inc
+    firmware/common/delay
+    firmware/common/hx711_drv
+    firmware/common/lcd_drv
 )
 
 target_compile_options(${PROJECT_NAME} PRIVATE
