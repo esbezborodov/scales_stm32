@@ -6,12 +6,19 @@
 #include "lcd_i2c.h"
 #include "number_parts.h"
 #include "leds.h"
-#include "hx711.h" 
+#include "board.h"
+#include "hx711.h"
 
 I2C_HandleTypeDef hi2c2;
 LCD_I2C_t lcd;
 number_parts_t data;
 hx711_t loadcell;
+
+/* Load cell sensitivity: raw ADC counts per kilogram. */
+#define COUNTS_PER_KG 385070.0f
+/* Samples averaged for tare and for every weight reading. */
+#define TARE_SAMPLES   16u
+#define WEIGHT_SAMPLES 4u
 
 float weight = 0.0;
 char buffer[20];
@@ -25,9 +32,12 @@ int main(void)
   leds_init();
   MX_I2C2_Init();
 
-  hx711_init(&loadcell, GPIOB, GPIO_PIN_12, GPIOB, GPIO_PIN_13);
-  hx711_tare(&loadcell, 10);
-  hx711_calibration(&loadcell, 798160, 355330, -1.15);
+  hx711_init(&loadcell, BOARD_HX711_SCK, BOARD_HX711_DOUT);
+  /* Let the ADC settle after power-up, then take the empty scale as zero. */
+  int32_t tare = 0;
+  int32_t raw;
+  hx711_read_average(&loadcell, 4, &raw);
+  hx711_read_average(&loadcell, TARE_SAMPLES, &tare);
 
   LCD_Init(&lcd, &hi2c2, 0x27, 16, 2);
   LCD_Backlight(&lcd, 1);
@@ -37,7 +47,9 @@ int main(void)
   while (1)
   {
     LCD_SetCursor(&lcd, 0, 1);
-    weight = hx711_weight(&loadcell, 1);
+    if (hx711_read_average(&loadcell, WEIGHT_SAMPLES, &raw) == HX711_OK) {
+      weight = (float)(raw - tare) / COUNTS_PER_KG;
+    }
     data.intg = integer_part(weight);
     data.frac = fractional_part(weight);
 

@@ -14,4 +14,8 @@
 #define BOARD_LED_RANGE3 ((gpio_pin_t){GPIOB, 14})
 #define BOARD_LED_RANGE4 ((gpio_pin_t){GPIOB, 15})
 
+/* HX711 load cell ADC. */
+#define BOARD_HX711_SCK  ((gpio_pin_t){GPIOB, 12})
+#define BOARD_HX711_DOUT ((gpio_pin_t){GPIOB, 13})
+
 #endif /* BOARD_H */

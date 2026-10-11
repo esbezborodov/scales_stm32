@@ -1,64 +1,40 @@
-#ifndef HX711_H_
-#define HX711_H_
-
+#ifndef HX711_H
+#define HX711_H
 
 /*
-  Author:     Nima Askari
-  WebSite:    http://www.github.com/NimaLTD
-  Instagram:  http://instagram.com/github.NimaLTD
-  Youtube:    https://www.youtube.com/channel/UCUhY7qY1klJm1d2kulr9ckw
-  
-  Version:    1.1.1
-  
-  
-  Reversion History:
-  
-  (1.1.1):
-    Add power down/up.
-  (1.1.0):
-    Add structure, Add calibration, Add weight, change names, ...
-  (1.0.0):
-    First Release.
-*/
+ * HX711 24-bit ADC for load cells (bit-banged two-wire interface).
+ *
+ * Only channel A with gain 128 is used: every conversion is read with
+ * 25 clock pulses. At RATE = 0 the chip produces 10 samples per second.
+ */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-  
-#include "main.h"
+#include <stdint.h>
 
-//####################################################################################################################
+#include "gpio.h"
 
-typedef struct
-{
-  GPIO_TypeDef  *clk_gpio;
-  GPIO_TypeDef  *dat_gpio;
-  uint16_t      clk_pin;
-  uint16_t      dat_pin;
-  int32_t       offset;
-  float         coef;
-  uint8_t       lock;    
-  
-}hx711_t;
+/* How long to wait for a conversion (the first one after power-up takes ~400 ms). */
+#define HX711_READY_TIMEOUT_MS 500u
 
-//####################################################################################################################
+typedef struct {
+    gpio_pin_t sck;
+    gpio_pin_t dout;
+} hx711_t;
 
-void        hx711_init(hx711_t *hx711, GPIO_TypeDef *clk_gpio, uint16_t clk_pin, GPIO_TypeDef *dat_gpio, uint16_t dat_pin);
-int32_t     hx711_value(hx711_t *hx711);
-int32_t     hx711_value_ave(hx711_t *hx711, uint16_t sample);
+typedef enum {
+    HX711_OK,
+    HX711_TIMEOUT, /* DOUT never went low: chip missing or powered down */
+} hx711_status_t;
 
-void        hx711_coef_set(hx711_t *hx711, float coef);
-float       hx711_coef_get(hx711_t *hx711);
-void        hx711_calibration(hx711_t *hx711, int32_t value_noload, int32_t value_load, float scale);
-void        hx711_tare(hx711_t *hx711, uint16_t sample);
-float       hx711_weight(hx711_t *hx711, uint16_t sample);
-void        hx711_power_down(hx711_t *hx711);
-void        hx711_power_up(hx711_t *hx711);
+void hx711_init(hx711_t *dev, gpio_pin_t sck, gpio_pin_t dout);
 
-//####################################################################################################################
+/* Read one conversion as a signed value (-8388608..8388607). */
+hx711_status_t hx711_read(const hx711_t *dev, int32_t *raw);
 
-#ifdef __cplusplus
-}
-#endif
+/* Read `samples` conversions and return their mean. */
+hx711_status_t hx711_read_average(const hx711_t *dev, uint8_t samples, int32_t *raw);
 
-#endif 
+/* SCK held high for more than 60 us puts the chip into power-down mode. */
+void hx711_power_down(const hx711_t *dev);
+void hx711_power_up(const hx711_t *dev);
+
+#endif /* HX711_H */
