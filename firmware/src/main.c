@@ -6,26 +6,23 @@
 #include "lcd_i2c.h"
 #include "number_parts.h"
 #include "leds.h"
-#include "leds_module.h" 
 #include "hx711.h" 
 
 I2C_HandleTypeDef hi2c2;
 LCD_I2C_t lcd;
 number_parts_t data;
-led_t leds[NUM_LEDS];
 hx711_t loadcell;
 
 float weight = 0.0;
 char buffer[20];
 
-static void MX_GPIO_Init(void);
 static void MX_I2C2_Init(void);
 
 int main(void)
 {
   clock_init();
   delay_init();
-  MX_GPIO_Init();
+  leds_init();
   MX_I2C2_Init();
 
   hx711_init(&loadcell, GPIOB, GPIO_PIN_12, GPIOB, GPIO_PIN_13);
@@ -37,7 +34,6 @@ int main(void)
   LCD_Clear(&lcd);
   LCD_SendString(&lcd, "Scale:");
 
-  leds_init(leds);
   while (1)
   {
     LCD_SetCursor(&lcd, 0, 1);
@@ -50,7 +46,7 @@ int main(void)
              (weight < 0.0f && data.intg == 0) ? "-" : "", data.intg, data.frac);
     LCD_SendString(&lcd, buffer);
 
-    leds_module_toggle(leds, weight);
+    leds_show_weight(weight);
     delay_ms(250);
 
   }
@@ -76,41 +72,6 @@ static void MX_I2C2_Init(void)
   {
     Error_Handler();
   }
-}
-
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : PA6 PA7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PB14 PB15 (PB12/PB13 are set up by the HX711 driver) */
-  GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 }
 
 /**

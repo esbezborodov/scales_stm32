@@ -57,6 +57,7 @@ add_executable(${PROJECT_NAME}
     firmware/src/main.c
     firmware/src/leds.c
     firmware/common/delay/delay.c
+    firmware/common/gpio_drv/gpio.c
     firmware/platform/clock.c
     firmware/common/hx711_drv/hx711.c
     firmware/common/lcd_drv/lcd_i2c.c
@@ -70,6 +71,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX .elf)
 target_include_directories(${PROJECT_NAME} PRIVATE
     firmware/inc
     firmware/common/delay
+    firmware/common/gpio_drv
     firmware/common/hx711_drv
     firmware/common/lcd_drv
 )
