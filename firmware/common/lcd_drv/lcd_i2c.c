@@ -5,11 +5,11 @@
 uint8_t LCD_command(LCD_I2C_t *lcd_i2c, uint8_t command);
 uint8_t LCD_send(LCD_I2C_t *lcd_i2c, uint8_t data, uint8_t flags);
 
-void LCD_Init(LCD_I2C_t *lcd_i2c, I2C_HandleTypeDef *handle, uint8_t addr, uint8_t cols, uint8_t rows)
+void LCD_Init(LCD_I2C_t *lcd_i2c, i2c_bus_t *bus, uint8_t addr, uint8_t cols, uint8_t rows)
 {
-    lcd_i2c->hi2c = handle;
+	lcd_i2c->bus = bus;
 
-	lcd_i2c->Addr = (addr << 1); //correct address
+	lcd_i2c->Addr = addr;
   	lcd_i2c->cols = cols;
   	lcd_i2c->rows = rows;
 	lcd_i2c->numlines = rows;
@@ -123,16 +123,8 @@ uint8_t LCD_command(LCD_I2C_t *lcd_i2c, uint8_t command)
  */
 uint8_t LCD_send(LCD_I2C_t *lcd_i2c, uint8_t data, uint8_t flags)
 {
-	if (lcd_i2c->hi2c == NULL) return 0;
+	if (lcd_i2c->bus == NULL) return 0;
 
-	HAL_StatusTypeDef res;
-	
-	//Is the device ready by lcd_i2c->Addr?
-	//Trials - 10 times
-	res = HAL_I2C_IsDeviceReady(lcd_i2c->hi2c, lcd_i2c->Addr, 10, HAL_MAX_DELAY);          
-	//Failed, nobody answered
-	if(res != HAL_OK) return 0;                                                  
-	
 	//Split byte to upper and lower parts
 	uint8_t up = data & 0xF0; //upper part     
 	uint8_t lo = (data << 4) & 0xF0; //lower part
@@ -147,49 +139,9 @@ uint8_t LCD_send(LCD_I2C_t *lcd_i2c, uint8_t data, uint8_t flags)
 	data_arr[2] = lo|flags|lcd_i2c->backlight|BIT_EN;
 	data_arr[3] = lo|flags|lcd_i2c->backlight;
 
-	res = HAL_I2C_Master_Transmit(lcd_i2c->hi2c, lcd_i2c->Addr, data_arr, sizeof(data_arr), HAL_MAX_DELAY);
-	
+	i2c_status_t res = i2c_write(lcd_i2c->bus, lcd_i2c->Addr, data_arr, sizeof(data_arr));
+
 	DELAY_MS(5);
-	
-	if (res == HAL_OK) return 1;
-	else return 0;
-}
 
-/* To enable this function define USE_I2C_SCAN 
-that's why the body of the function is placed here */
-#ifdef USE_I2C_SCAN
-
-/**
- * This function scans the I2C bus and prints found devices to specified UART
- * @param *hi2c - handle to i2c
- * @param *huart - handle to uart
- */
-void I2C_Scan (I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart)
-{
-	HAL_StatusTypeDef res;                          
-	// сообщение о начале процедуры
-	char info[] = "Scanning I2C bus...\r\n";
-	// отправка сообщения по UART	
-	HAL_UART_Transmit(huart, (uint8_t *)info, strlen(info), HAL_MAX_DELAY);
-	
-	char msg[10];
-	// перебор всех возможных адресов
-	for(uint16_t i = 0; i < 128; i++)              
-	{
-		// проверяем, готово ли устройство по адресу i для связи
-		res = HAL_I2C_IsDeviceReady(hi2c, i << 1, 1, HAL_MAX_DELAY);                   
-	    // если да, то
-		if(res == HAL_OK)                              
-	    {
-	    	// запись адреса i, на который откликнулись, в строку в виде 
-			// 16тиричного значения:
-	    	sprintf(msg, "0x%02X\r\n", i);
-	    	// отправка номера откликнувшегося адреса
-			HAL_UART_Transmit(huart, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
-	    }
-	}
-	char finished[] = "Finished\r\n";
-	// отправка сообщения по UART	
-	HAL_UART_Transmit(huart, (uint8_t *)finished, strlen(finished), HAL_MAX_DELAY);
+	return (res == I2C_OK) ? 1 : 0;
 }
-#endif

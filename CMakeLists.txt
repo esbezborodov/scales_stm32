@@ -38,7 +38,6 @@ add_library(stm32f1_hal STATIC
     ${HAL_DIR}/stm32f1xx_hal_flash_ex.c
     ${HAL_DIR}/stm32f1xx_hal_gpio.c
     ${HAL_DIR}/stm32f1xx_hal_gpio_ex.c
-    ${HAL_DIR}/stm32f1xx_hal_i2c.c
     ${HAL_DIR}/stm32f1xx_hal_pwr.c
     ${HAL_DIR}/stm32f1xx_hal_rcc.c
     ${HAL_DIR}/stm32f1xx_hal_rcc_ex.c
@@ -58,6 +57,7 @@ add_executable(${PROJECT_NAME}
     firmware/src/leds.c
     firmware/common/delay/delay.c
     firmware/common/gpio_drv/gpio.c
+    firmware/common/i2c_drv/i2c.c
     firmware/platform/clock.c
     firmware/common/hx711_drv/hx711.c
     firmware/common/lcd_drv/lcd_i2c.c
@@ -72,6 +72,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     firmware/inc
     firmware/common/delay
     firmware/common/gpio_drv
+    firmware/common/i2c_drv
     firmware/common/hx711_drv
     firmware/common/lcd_drv
 )

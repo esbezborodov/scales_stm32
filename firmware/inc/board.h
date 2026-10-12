@@ -18,4 +18,10 @@
 #define BOARD_HX711_SCK  ((gpio_pin_t){GPIOB, 12})
 #define BOARD_HX711_DOUT ((gpio_pin_t){GPIOB, 13})
 
+/* LCD1602 with a PCF8574 I2C backpack. */
+#define BOARD_LCD_I2C     I2C2
+#define BOARD_LCD_I2C_SCL ((gpio_pin_t){GPIOB, 10})
+#define BOARD_LCD_I2C_SDA ((gpio_pin_t){GPIOB, 11})
+#define BOARD_LCD_ADDR    0x27u
+
 #endif /* BOARD_H */

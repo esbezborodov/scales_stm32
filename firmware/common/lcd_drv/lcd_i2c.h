@@ -46,8 +46,8 @@ extern "C" {
  * https://github.com/FamNuven/STM32_1602-2004
  */
 
-#include "stm32f1xx_hal.h"
 #include "delay.h"
+#include "i2c.h"
 
 #define DELAY_MS(x) delay_ms(x)
 
@@ -102,7 +102,7 @@ extern "C" {
  * @note   Everything is fully private and should not be touched by user
  */
 typedef struct {
-    I2C_HandleTypeDef *hi2c;
+    i2c_bus_t *bus;
     uint8_t Addr;
     uint8_t displaycontrol;
     uint8_t displaymode;
@@ -117,11 +117,11 @@ typedef struct {
 /**
  * @brief Display init
  * @par *lcd_i2c - Pointer to @ref LCD_I2C_t working lcd_i2c struct
- * @par addr - address of the display. It could be get in I2C_Scan
+ * @par addr - 7-bit I2C address of the display
  * @par cols - width of the display
  * @par rows - height of the display
  */
-void LCD_Init(LCD_I2C_t *lcd_i2c, I2C_HandleTypeDef *, uint8_t addr, uint8_t cols, uint8_t rows);
+void LCD_Init(LCD_I2C_t *lcd_i2c, i2c_bus_t *bus, uint8_t addr, uint8_t cols, uint8_t rows);
 
 /**
  * Set cursor to the left top corner.
@@ -172,10 +172,6 @@ void LCD_SetCursor(LCD_I2C_t *lcd_i2c, uint8_t col, uint8_t row);
 void LCD_SendString(LCD_I2C_t *lcd_i2c, const char *str);
 
 uint8_t LCD_send(LCD_I2C_t *lcd_i2c, uint8_t data, uint8_t flags);
-
-#ifdef USE_I2C_SCAN
-void I2C_Scan (I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart);
-#endif
 
 /* C++ detection */
 #ifdef __cplusplus
