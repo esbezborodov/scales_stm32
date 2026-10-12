@@ -60,7 +60,7 @@ add_executable(${PROJECT_NAME}
     firmware/common/i2c_drv/i2c.c
     firmware/platform/clock.c
     firmware/common/hx711_drv/hx711.c
-    firmware/common/lcd_drv/lcd_i2c.c
+    firmware/common/lcd_drv/lcd1602.c
     firmware/platform/stm32f1xx_it.c
     firmware/platform/stm32f1xx_hal_msp.c
     firmware/platform/startup_stm32f103xb.s

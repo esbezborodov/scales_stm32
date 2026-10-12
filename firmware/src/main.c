@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include "clock.h"
 #include "delay.h"
-#include "lcd_i2c.h"
+#include "lcd1602.h"
 #include "number_parts.h"
 #include "leds.h"
 #include "board.h"
@@ -11,7 +11,7 @@
 #include "i2c.h"
 
 i2c_bus_t i2c;
-LCD_I2C_t lcd;
+lcd1602_t lcd;
 number_parts_t data;
 hx711_t loadcell;
 
@@ -38,24 +38,20 @@ int main(void)
   hx711_read_average(&loadcell, 4, &raw);
   hx711_read_average(&loadcell, TARE_SAMPLES, &tare);
 
-  LCD_Init(&lcd, &i2c, BOARD_LCD_ADDR, 16, 2);
-  LCD_Backlight(&lcd, 1);
-  LCD_Clear(&lcd);
-  LCD_SendString(&lcd, "Scale:");
+  lcd_init(&lcd, &i2c, BOARD_LCD_ADDR);
+  lcd_print_line(&lcd, 0, "Scale:");
 
   while (1)
   {
-    LCD_SetCursor(&lcd, 0, 1);
     if (hx711_read_average(&loadcell, WEIGHT_SAMPLES, &raw) == HX711_OK) {
       weight = (float)(raw - tare) / COUNTS_PER_KG;
     }
     data.intg = integer_part(weight);
     data.frac = fractional_part(weight);
 
-    /* Trailing spaces wipe leftovers of a longer previous value. */
-    snprintf(buffer, sizeof(buffer), "%s%d.%02d kg   ",
+    snprintf(buffer, sizeof(buffer), "%s%d.%02d kg",
              (weight < 0.0f && data.intg == 0) ? "-" : "", data.intg, data.frac);
-    LCD_SendString(&lcd, buffer);
+    lcd_print_line(&lcd, 1, buffer);
 
     leds_show_weight(weight);
     delay_ms(250);
@@ -72,7 +68,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
-    LCD_SendString(&lcd, "Error");
+    lcd_print_line(&lcd, 0, "Error");
   }
 }
 
