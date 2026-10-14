@@ -22,6 +22,7 @@ add_executable(${PROJECT_NAME}
     firmware/src/main.c
     firmware/src/leds.c
     firmware/src/display.c
+    firmware/src/indicator.c
     firmware/src/scale.c
     firmware/src/weight_format.c
     firmware/common/delay/delay.c

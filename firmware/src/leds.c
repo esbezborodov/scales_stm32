@@ -25,23 +25,9 @@ void leds_set(led_t led, bool on)
     }
 }
 
-void leds_all_off(void)
+void leds_set_all(bool on)
 {
     for (int i = 0; i < LED_COUNT; i++) {
-        gpio_write(led_pins[i], false);
-    }
-}
-
-void leds_show_weight(float weight)
-{
-    leds_all_off();
-    if ((0.0f < weight) && (weight <= 1.25f)) {
-        leds_set(LED_RANGE1, true);
-    } else if ((1.25f < weight) && (weight <= 2.50f)) {
-        leds_set(LED_RANGE2, true);
-    } else if ((2.50f < weight) && (weight <= 3.75f)) {
-        leds_set(LED_RANGE3, true);
-    } else if ((3.75f < weight) && (weight <= 5.00f)) {
-        leds_set(LED_RANGE4, true);
+        gpio_write(led_pins[i], on);
     }
 }

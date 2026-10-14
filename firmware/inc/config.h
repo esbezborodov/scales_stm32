@@ -13,8 +13,17 @@
 /* 1: show raw counts (minus tare) on the first LCD row instead of the title. */
 #define SCALE_CALIBRATION_MODE 0
 
-/* Upper limit of the measuring range; heavier loads show "Overload". */
-#define SCALE_MAX_GRAMS 5000
+/*
+ * LED ranges: upper bound of every range in grams, one per LED. Above the last
+ * bound the scale shows "Overload" and all LEDs blink.
+ */
+#define INDICATOR_RANGE1_MAX_GRAMS 1250
+#define INDICATOR_RANGE2_MAX_GRAMS 2500
+#define INDICATOR_RANGE3_MAX_GRAMS 3750
+#define INDICATOR_RANGE4_MAX_GRAMS 5000
+
+/* Readings up to this weight count as an empty scale (no LED is lit). */
+#define INDICATOR_ZERO_BAND_GRAMS 10
 
 /* Conversions averaged for the tare and for every reading (10 per second). */
 #define SCALE_TARE_SAMPLES 16u
