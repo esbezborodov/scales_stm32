@@ -1,15 +1,14 @@
 #include <stdint.h>
-#include <stdio.h>
 
 #include "board.h"
 #include "clock.h"
 #include "config.h"
 #include "delay.h"
+#include "display.h"
 #include "hx711.h"
 #include "i2c.h"
 #include "lcd1602.h"
 #include "leds.h"
-#include "number_parts.h"
 #include "scale.h"
 
 static i2c_bus_t i2c;
@@ -34,29 +33,28 @@ int main(void)
     leds_init();
     i2c_init(&i2c, BOARD_LCD_I2C, BOARD_LCD_I2C_SCL, BOARD_LCD_I2C_SDA, 100000u);
     lcd_init(&lcd, &i2c, BOARD_LCD_ADDR);
-    lcd_print_line(&lcd, 0, "Scale:");
-    lcd_print_line(&lcd, 1, "Taring...");
+    display_init(&lcd);
+    display_taring();
 
     hx711_init(&loadcell, BOARD_HX711_SCK, BOARD_HX711_DOUT);
     scale_init(&scale, SCALE_COUNTS_PER_KG);
     tare();
 
-    char buffer[LCD_COLS + 1];
-
     while (1) {
         int32_t raw;
-        if (hx711_read_average(&loadcell, SCALE_READ_SAMPLES, &raw) == HX711_OK) {
-            const float weight = (float)scale_to_grams(&scale, raw) / 1000.0f;
-
-            number_parts_t parts = {integer_part(weight), fractional_part(weight)};
-            snprintf(buffer, sizeof(buffer), "%s%d.%02d kg",
-                     (weight < 0.0f && parts.intg == 0) ? "-" : "", parts.intg, parts.frac);
-            lcd_print_line(&lcd, 1, buffer);
-            leds_show_weight(weight);
-
+        if (hx711_read_average(&loadcell, SCALE_READ_SAMPLES, &raw) != HX711_OK) {
+            display_sensor_error();
+            leds_all_off();
+        } else {
+            const int32_t grams = scale_to_grams(&scale, raw);
+            if (grams > SCALE_MAX_GRAMS) {
+                display_overload();
+            } else {
+                display_weight(grams);
+            }
+            leds_show_weight((float)grams / 1000.0f);
 #if SCALE_CALIBRATION_MODE
-            snprintf(buffer, sizeof(buffer), "raw %ld", (long)scale_net_counts(&scale, raw));
-            lcd_print_line(&lcd, 0, buffer);
+            display_counts(scale_net_counts(&scale, raw));
 #endif
         }
         delay_ms(SCALE_UPDATE_PERIOD_MS);

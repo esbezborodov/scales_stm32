@@ -21,7 +21,9 @@ set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/firmware/platform/STM32F103C8TX_FL
 add_executable(${PROJECT_NAME}
     firmware/src/main.c
     firmware/src/leds.c
+    firmware/src/display.c
     firmware/src/scale.c
+    firmware/src/weight_format.c
     firmware/common/delay/delay.c
     firmware/common/gpio_drv/gpio.c
     firmware/common/i2c_drv/i2c.c
@@ -73,7 +75,6 @@ target_link_options(${PROJECT_NAME} PRIVATE
     ${MCU_FLAGS}
     -T${LINKER_SCRIPT}
     --specs=nano.specs
-    --specs=nosys.specs
     -Wl,--gc-sections
     -Wl,-Map=${PROJECT_NAME}.map,--cref
     -Wl,--print-memory-usage

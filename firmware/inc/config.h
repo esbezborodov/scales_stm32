@@ -13,6 +13,9 @@
 /* 1: show raw counts (minus tare) on the first LCD row instead of the title. */
 #define SCALE_CALIBRATION_MODE 0
 
+/* Upper limit of the measuring range; heavier loads show "Overload". */
+#define SCALE_MAX_GRAMS 5000
+
 /* Conversions averaged for the tare and for every reading (10 per second). */
 #define SCALE_TARE_SAMPLES 16u
 #define SCALE_READ_SAMPLES 4u
