@@ -21,6 +21,14 @@
             "detail": "Clean project"
         },
         {
+            "label": "Test",
+            "type": "shell",
+            "command": "./test.sh",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Build and run host unit tests"
+        },
+        {
             "type": "shell",
             "label": "Flash",
             "command": "./flash.sh",
