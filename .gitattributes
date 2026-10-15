@@ -4,3 +4,7 @@
 # Vendor code and SVD files are kept byte-identical to upstream.
 vendor/** -text
 *.svd -text
+
+# Images
+*.png binary
+*.jpg binary
