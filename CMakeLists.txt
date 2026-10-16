@@ -15,6 +15,14 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
 endif()
 
+# Target board: "custom" (the PCB in hardware/) or "bluepill" (breadboard prototype).
+set(BOARD custom CACHE STRING "Target board")
+set_property(CACHE BOARD PROPERTY STRINGS custom bluepill)
+if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/firmware/boards/${BOARD}/board.h)
+    message(FATAL_ERROR "Unknown BOARD '${BOARD}', expected custom or bluepill")
+endif()
+message(STATUS "Board: ${BOARD}")
+
 set(MCU_FLAGS -mcpu=cortex-m3 -mthumb -mfloat-abi=soft)
 set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/firmware/platform/STM32F103C8TX_FLASH.ld)
 
@@ -38,6 +46,7 @@ add_executable(${PROJECT_NAME}
 set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX .elf)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
+    firmware/boards/${BOARD}
     firmware/inc
     firmware/platform
     firmware/common/delay

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build and flash the board through an ST-LINK (SWD).
-# Usage: ./flash.sh [debug|release]
+# Usage: ./flash.sh [debug|release|bluepill-debug|bluepill-release]
 set -euo pipefail
 
 cd "$(dirname "$0")"

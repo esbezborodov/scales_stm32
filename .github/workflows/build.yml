@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
-        preset: [debug, release]
+        preset: [debug, release, bluepill-debug, bluepill-release]
     steps:
       - uses: actions/checkout@v4
 

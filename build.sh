@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Configure and build the firmware. Usage: ./build.sh [debug|release]
+# Configure and build the firmware.
+# Usage: ./build.sh [debug|release|bluepill-debug|bluepill-release]
 set -euo pipefail
 
 PRESET="${1:-debug}"

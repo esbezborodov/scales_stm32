@@ -52,7 +52,8 @@ about 4.5 KB of flash.
 | LCD VCC / GND | 5V / GND |
 | LED 1 … 4 | PA7, PA6, PB14, PB15 |
 
-The pin assignment is in [`firmware/inc/board.h`](firmware/inc/board.h).
+The pin assignment is in [`firmware/boards/`](firmware/boards): `custom` for the PCB (default) and
+`bluepill` for the breadboard prototype, selected with the `BOARD` CMake variable or a preset.
 PB10 and PB11 are 5 V tolerant, so the LCD backpack pull-ups may go to 5 V.
 
 ## Build, flash and test
@@ -73,6 +74,7 @@ sudo apt install gcc-arm-none-eabi libnewlib-arm-none-eabi cmake ninja-build ope
 ./build.sh            # Debug build   → build/debug/scale_firmware.{elf,bin,hex}
 ./build.sh release    # Release build → build/release/
 ./flash.sh            # build and flash through an ST-LINK
+./flash.sh bluepill-release   # the same for the Blue Pill prototype
 ./test.sh             # host unit tests: gram conversion, formatting, LED ranges
 ```
 

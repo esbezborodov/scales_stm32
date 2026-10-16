@@ -11,18 +11,32 @@
     {
       "name": "debug",
       "inherits": "base",
-      "displayName": "Debug",
+      "displayName": "Debug (custom board)",
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
     },
     {
       "name": "release",
       "inherits": "base",
-      "displayName": "Release",
+      "displayName": "Release (custom board)",
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    },
+    {
+      "name": "bluepill-debug",
+      "inherits": "debug",
+      "displayName": "Debug (Blue Pill prototype)",
+      "cacheVariables": { "BOARD": "bluepill" }
+    },
+    {
+      "name": "bluepill-release",
+      "inherits": "release",
+      "displayName": "Release (Blue Pill prototype)",
+      "cacheVariables": { "BOARD": "bluepill" }
     }
   ],
   "buildPresets": [
     { "name": "debug", "configurePreset": "debug" },
-    { "name": "release", "configurePreset": "release" }
+    { "name": "release", "configurePreset": "release" },
+    { "name": "bluepill-debug", "configurePreset": "bluepill-debug" },
+    { "name": "bluepill-release", "configurePreset": "bluepill-release" }
   ]
 }

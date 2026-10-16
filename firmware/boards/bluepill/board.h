@@ -2,8 +2,8 @@
 #define BOARD_H
 
 /*
- * Pin assignment. The custom board uses the same pinout as a Blue Pill
- * (STM32F103C8T6 with an 8 MHz crystal).
+ * Pin assignment of the breadboard prototype: Blue Pill (STM32F103C8T6,
+ * 8 MHz crystal) with HX711 and LCD1602 modules. Build with -DBOARD=bluepill.
  */
 
 #include "gpio.h"
