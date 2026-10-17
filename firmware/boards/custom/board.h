@@ -9,6 +9,12 @@
 #include "gpio.h"
 
 /*
+ * Rev. 1 of the PCB routes the 8 MHz crystal ZQ1 to PC14/PC15 (the 32 kHz LSE
+ * pins) instead of OSC_IN/OSC_OUT, so there is no usable HSE: run from HSI.
+ */
+#define BOARD_HAS_HSE 0
+
+/*
  * Weight range LEDs, from the lightest range to the heaviest. On the PCB
  * they sit left to right as HL5 (PA6), HL3 (PA7), HL4 (PB14), HL2 (PB15).
  */

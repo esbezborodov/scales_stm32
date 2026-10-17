@@ -8,6 +8,9 @@
 
 #include "gpio.h"
 
+/* 8 MHz crystal on OSC_IN/OSC_OUT (PD0/PD1). */
+#define BOARD_HAS_HSE 1
+
 /* Weight range LEDs, from the lightest range to the heaviest. */
 #define BOARD_LED_RANGE1 ((gpio_pin_t){GPIOA, 7})
 #define BOARD_LED_RANGE2 ((gpio_pin_t){GPIOA, 6})

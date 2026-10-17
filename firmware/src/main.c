@@ -53,7 +53,7 @@ static void show_range(int range)
 
 int main(void)
 {
-    clock_init();
+    clock_init(BOARD_HAS_HSE);
     delay_init();
     leds_init();
     i2c_init(&i2c, BOARD_LCD_I2C, BOARD_LCD_I2C_SCL, BOARD_LCD_I2C_SDA, 100000u);

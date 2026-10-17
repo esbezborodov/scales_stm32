@@ -20,12 +20,12 @@ static bool hse_start(void)
     return false;
 }
 
-clock_source_t clock_init(void)
+clock_source_t clock_init(bool use_hse)
 {
     /* Two wait states are required for 48 MHz < SYSCLK <= 72 MHz. */
     FLASH->ACR = FLASH_ACR_PRFTBE | FLASH_ACR_LATENCY_1;
 
-    const bool hse_ok = hse_start();
+    const bool hse_ok = use_hse && hse_start();
 
     uint32_t cfgr = RCC_CFGR_HPRE_DIV1 | RCC_CFGR_PPRE1_DIV2 | RCC_CFGR_PPRE2_DIV1;
     if (hse_ok) {
