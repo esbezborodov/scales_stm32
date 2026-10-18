@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37474f"/>
+    </marker>
+    <style>
+      .box { fill: #f5f7fa; stroke: #37474f; stroke-width: 2; }
+      .key { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; }
+      .title { font-size: 15px; font-weight: bold; fill: #263238; }
+      .sub { font-size: 12px; fill: #546e7a; }
+      .lbl { font-size: 12px; fill: #37474f; }
+      .wire { fill: none; stroke: #37474f; stroke-width: 2; marker-end: url(#arrow); }
+      .pwr { fill: none; stroke: #c62828; stroke-width: 2; marker-end: url(#arrow); }
+      .pwr-plain { fill: none; stroke: #c62828; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Power input and regulator -->
+  <text class="lbl" x="18" y="200">+5 V (USB)</text>
+  <path class="pwr" d="M18 210 H100"/>
+  <rect class="box" x="100" y="180" width="170" height="60" rx="6"/>
+  <text class="title" x="185" y="205" text-anchor="middle">Voltage regulator</text>
+  <text class="sub" x="185" y="223" text-anchor="middle">AMS1117-3.3</text>
+
+  <rect class="box" x="100" y="55" width="170" height="55" rx="6"/>
+  <text class="title" x="185" y="80" text-anchor="middle">Power LED</text>
+  <text class="sub" x="185" y="97" text-anchor="middle">HL1</text>
+  <path class="pwr" d="M185 180 V110"/>
+
+  <!-- 3.3 V bus -->
+  <path class="pwr-plain" d="M270 210 H340 M340 95 V290"/>
+  <text class="lbl" x="276" y="203">+3.3 V</text>
+  <path class="pwr" d="M340 95 H470"/>
+  <path class="pwr" d="M340 240 H470"/>
+  <path class="pwr" d="M340 290 H360"/>
+
+  <!-- Reset -->
+  <rect class="box" x="360" y="270" width="90" height="40" rx="6"/>
+  <text class="title" x="405" y="295" text-anchor="middle" font-size="13">Reset</text>
+  <path class="wire" d="M450 290 H470"/>
+
+  <!-- ADC and load cell -->
+  <rect class="key" x="470" y="60" width="180" height="70" rx="6"/>
+  <text class="title" x="560" y="90" text-anchor="middle">ADC</text>
+  <text class="sub" x="560" y="108" text-anchor="middle">HX711, 24-bit</text>
+  <rect class="box" x="720" y="60" width="160" height="70" rx="6"/>
+  <text class="title" x="800" y="90" text-anchor="middle">Load cell</text>
+  <text class="sub" x="800" y="108" text-anchor="middle">strain gauge, 5 kg</text>
+  <path class="wire" d="M650 95 H720" marker-start="url(#arrow)"/>
+  <path class="wire" d="M560 130 V220"/>
+  <text class="lbl" x="570" y="180">DOUT / PD_SCK</text>
+
+  <!-- MCU -->
+  <rect class="key" x="470" y="220" width="180" height="90" rx="6"/>
+  <text class="title" x="560" y="258" text-anchor="middle">Microcontroller</text>
+  <text class="sub" x="560" y="276" text-anchor="middle">STM32F103C8T6</text>
+
+  <rect class="box" x="720" y="195" width="160" height="40" rx="6"/>
+  <text class="title" x="800" y="220" text-anchor="middle" font-size="13">Crystal</text>
+  <path class="wire" d="M720 215 H650"/>
+  <rect class="box" x="720" y="250" width="160" height="40" rx="6"/>
+  <text class="title" x="800" y="275" text-anchor="middle" font-size="13">SWD header</text>
+  <path class="wire" d="M720 270 H650"/>
+
+  <!-- Outputs -->
+  <rect class="box" x="470" y="395" width="180" height="55" rx="6"/>
+  <text class="title" x="560" y="420" text-anchor="middle">Display</text>
+  <text class="sub" x="560" y="437" text-anchor="middle">LCD1602 + PCF8574</text>
+  <path class="wire" d="M560 310 V395"/>
+  <text class="lbl" x="570" y="360">I2C</text>
+  <path class="pwr" d="M60 210 V422 H470"/>
+  <text class="lbl" x="70" y="414">+5 V</text>
+  <circle cx="60" cy="210" r="4" fill="#c62828"/>
+  <circle cx="340" cy="210" r="4" fill="#c62828"/>
+  <circle cx="340" cy="240" r="4" fill="#c62828"/>
+
+  <rect class="box" x="720" y="395" width="160" height="55" rx="6"/>
+  <text class="title" x="800" y="420" text-anchor="middle">Range LEDs</text>
+  <text class="sub" x="800" y="437" text-anchor="middle">HL2–HL5</text>
+  <path class="wire" d="M650 300 H800 V395"/>
+  <text class="lbl" x="810" y="350">GPIO</text>
+</svg>

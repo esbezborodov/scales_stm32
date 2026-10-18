@@ -1,0 +1,889 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6255 3175" width="6255" height="3175" font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+<rect width="6255" height="3175" fill="#ffffff"/>
+<line x1="2410.2" y1="1244.8" x2="2370.8" y2="1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1240.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">7</text>
+<text x="2422.2" y="1244.8" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">NRST</text>
+<line x1="2961.4" y1="2977.1" x2="3000.8" y2="2977.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2972.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">44</text>
+<text x="2949.4" y="2977.1" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">BOOT0</text>
+<line x1="2410.2" y1="1323.6" x2="2370.8" y2="1323.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1318.8" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">5</text>
+<text x="2422.2" y="1323.6" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PD0</text>
+<line x1="2410.2" y1="1481.1" x2="2370.8" y2="1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1476.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">2</text>
+<text x="2422.2" y="1481.1" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PC13</text>
+<line x1="2410.2" y1="1402.3" x2="2370.8" y2="1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1397.5" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">6</text>
+<text x="2422.2" y="1402.3" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PD1</text>
+<line x1="2410.2" y1="1559.8" x2="2370.8" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1555.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">3</text>
+<text x="2422.2" y="1559.8" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PC14</text>
+<line x1="2410.2" y1="1717.3" x2="2370.8" y2="1717.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1712.5" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">18</text>
+<text x="2422.2" y="1717.3" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB0</text>
+<line x1="2410.2" y1="1638.5" x2="2370.8" y2="1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1633.7" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">4</text>
+<text x="2422.2" y="1638.5" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PC15</text>
+<line x1="2410.2" y1="1796.0" x2="2370.8" y2="1796.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1791.2" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">19</text>
+<text x="2422.2" y="1796.0" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB1</text>
+<line x1="2410.2" y1="1874.8" x2="2370.8" y2="1874.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1870.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">20</text>
+<text x="2422.2" y="1874.8" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB2</text>
+<line x1="2410.2" y1="1953.5" x2="2370.8" y2="1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="1948.7" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">39</text>
+<text x="2422.2" y="1953.5" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB3</text>
+<line x1="2410.2" y1="2032.2" x2="2370.8" y2="2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2027.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">40</text>
+<text x="2422.2" y="2032.2" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB4</text>
+<line x1="2410.2" y1="2111.0" x2="2370.8" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2106.2" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">41</text>
+<text x="2422.2" y="2111.0" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB5</text>
+<line x1="2410.2" y1="2189.7" x2="2370.8" y2="2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2184.9" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">42</text>
+<text x="2422.2" y="2189.7" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB6</text>
+<line x1="2410.2" y1="2268.5" x2="2370.8" y2="2268.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2263.7" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">43</text>
+<text x="2422.2" y="2268.5" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB7</text>
+<line x1="2410.2" y1="2347.2" x2="2370.8" y2="2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2342.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">45</text>
+<text x="2422.2" y="2347.2" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB8</text>
+<line x1="2410.2" y1="2425.9" x2="2370.8" y2="2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2421.1" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">46</text>
+<text x="2422.2" y="2425.9" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB9</text>
+<line x1="2410.2" y1="2504.7" x2="2370.8" y2="2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2499.9" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">21</text>
+<text x="2422.2" y="2504.7" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB10</text>
+<line x1="2961.4" y1="2504.7" x2="3000.8" y2="2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2499.9" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">33</text>
+<text x="2949.4" y="2504.7" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA12</text>
+<line x1="2961.4" y1="2425.9" x2="3000.8" y2="2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2421.1" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">32</text>
+<text x="2949.4" y="2425.9" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA11</text>
+<line x1="2961.4" y1="2347.2" x2="3000.8" y2="2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2342.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">31</text>
+<text x="2949.4" y="2347.2" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA10</text>
+<line x1="2961.4" y1="2189.7" x2="3000.8" y2="2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2184.9" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">29</text>
+<text x="2949.4" y="2189.7" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA8</text>
+<line x1="2961.4" y1="2268.5" x2="3000.8" y2="2268.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2263.7" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">30</text>
+<text x="2949.4" y="2268.5" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA9</text>
+<line x1="2961.4" y1="2111.0" x2="3000.8" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2106.2" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">17</text>
+<text x="2949.4" y="2111.0" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA7</text>
+<line x1="2961.4" y1="1953.5" x2="3000.8" y2="1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1948.7" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">15</text>
+<text x="2949.4" y="1953.5" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA5</text>
+<line x1="2961.4" y1="2032.2" x2="3000.8" y2="2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2027.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">16</text>
+<text x="2949.4" y="2032.2" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA6</text>
+<line x1="2961.4" y1="1874.8" x2="3000.8" y2="1874.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1870.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">14</text>
+<text x="2949.4" y="1874.8" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA4</text>
+<line x1="2961.4" y1="1796.0" x2="3000.8" y2="1796.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1791.2" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">13</text>
+<text x="2949.4" y="1796.0" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA3</text>
+<line x1="2961.4" y1="1717.3" x2="3000.8" y2="1717.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1712.5" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">12</text>
+<text x="2949.4" y="1717.3" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA2</text>
+<line x1="2961.4" y1="1638.5" x2="3000.8" y2="1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1633.7" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">11</text>
+<text x="2949.4" y="1638.5" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA1</text>
+<line x1="2961.4" y1="1559.8" x2="3000.8" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1555.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">10</text>
+<text x="2949.4" y="1559.8" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA0</text>
+<line x1="2961.4" y1="1481.1" x2="3000.8" y2="1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1476.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">28</text>
+<text x="2949.4" y="1481.1" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PB15</text>
+<line x1="2961.4" y1="1402.3" x2="3000.8" y2="1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1397.5" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">27</text>
+<text x="2949.4" y="1402.3" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PB14</text>
+<line x1="2961.4" y1="1323.6" x2="3000.8" y2="1323.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1318.8" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">26</text>
+<text x="2949.4" y="1323.6" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PB13</text>
+<line x1="2961.4" y1="1244.8" x2="3000.8" y2="1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="1240.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">25</text>
+<text x="2949.4" y="1244.8" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PB12</text>
+<line x1="2410.2" y1="2583.4" x2="2370.8" y2="2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2578.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">22</text>
+<text x="2422.2" y="2583.4" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">PB11</text>
+<line x1="2961.4" y1="2583.4" x2="3000.8" y2="2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2578.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">34</text>
+<text x="2949.4" y="2583.4" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA13</text>
+<line x1="2961.4" y1="2662.2" x2="3000.8" y2="2662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2657.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">37</text>
+<text x="2949.4" y="2662.2" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA14</text>
+<polyline points="2607.1,1205.5 2607.1,2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2764.5,1205.5 2764.5,2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2646.4" y="1278.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">MCU</text>
+<line x1="2961.4" y1="2819.6" x2="3000.8" y2="2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2814.8" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">23</text>
+<text x="2949.4" y="2819.6" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">VSS</text>
+<line x1="2961.4" y1="2740.9" x2="3000.8" y2="2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2736.1" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">38</text>
+<text x="2949.4" y="2740.9" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PA15</text>
+<line x1="2961.4" y1="2898.4" x2="3000.8" y2="2898.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2985.8" y="2893.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">8</text>
+<text x="2949.4" y="2898.4" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">VSSA</text>
+<line x1="2410.2" y1="2977.1" x2="2370.8" y2="2977.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2972.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">9</text>
+<text x="2422.2" y="2977.1" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VDDA</text>
+<line x1="2410.2" y1="2819.6" x2="2370.8" y2="2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2814.8" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">36</text>
+<text x="2422.2" y="2819.6" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VDD</text>
+<line x1="2410.2" y1="2898.4" x2="2370.8" y2="2898.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2893.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">48</text>
+<text x="2422.2" y="2898.4" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VDD</text>
+<line x1="2410.2" y1="2740.9" x2="2370.8" y2="2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2736.1" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">24</text>
+<text x="2422.2" y="2740.9" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VDD</text>
+<line x1="2410.2" y1="2662.2" x2="2370.8" y2="2662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2385.8" y="2657.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="2422.2" y="2662.2" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VBAT</text>
+<polyline points="2410.2,1205.5 2961.4,1205.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2961.4,1205.5 2961.4,2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2410.2,2150.4 2410.2,1205.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2961.4,2111.0 2961.4,3016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2410.2,2150.4 2410.2,3016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2607.1,2150.4 2607.1,3016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2764.5,2150.4 2764.5,3016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2961.4,3016.5 2410.2,3016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2898.4" y="1191.6" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">DD2</text>
+<polyline points="1992.9,2772.4 2118.9,2772.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1992.9,2748.8 2118.9,2748.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2055.9" y1="2748.8" x2="2055.9" y2="2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2055.9" y1="2772.4" x2="2055.9" y2="2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2134.6" y="2774.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C13</text>
+<text x="2111.0" y="2821.5" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="1756.7,2772.4 1882.6,2772.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1756.7,2748.8 1882.6,2748.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1819.7" y1="2748.8" x2="1819.7" y2="2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1819.7" y1="2772.4" x2="1819.7" y2="2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1898.4" y="2774.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C11</text>
+<text x="1874.8" y="2821.5" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="1481.1,2772.4 1607.1,2772.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1481.1,2748.8 1607.1,2748.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1544.1" y1="2748.8" x2="1544.1" y2="2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1544.1" y1="2772.4" x2="1544.1" y2="2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1630.7" y="2766.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C7</text>
+<text x="1614.9" y="2813.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="1205.5,2772.4 1331.5,2772.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1205.5,2748.8 1331.5,2748.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1268.5" y1="2748.8" x2="1268.5" y2="2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1268.5" y1="2772.4" x2="1268.5" y2="2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1355.1" y="2766.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C4</text>
+<text x="1331.5" y="2813.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="3079.5,3063.7 3237.0,3063.7 3237.0,3126.7 3079.5,3126.7 3079.5,3063.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3079.5" y1="3095.2" x2="3040.1" y2="3095.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3237.0" y1="3095.2" x2="3276.3" y2="3095.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3126.7" y="3018.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R15</text>
+<text x="3095.2" y="3057.7" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">10k</text>
+<line x1="3394.5" y1="3095.2" x2="3394.5" y2="3135.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3370.5" y1="3135.2" x2="3418.5" y2="3135.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3394.5" y="3147.2" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="2071.6,1197.6 2197.6,1197.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2071.6,1174.0 2197.6,1174.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2134.6" y1="1174.0" x2="2134.6" y2="1126.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2134.6" y1="1197.6" x2="2134.6" y2="1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2237.0" y="1175.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C12</text>
+<text x="2197.6" y="1215.2" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="1985.0,1087.4 1890.5,1032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1985.0" y1="1087.4" x2="2016.5" y2="1087.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1890.5" y1="1087.4" x2="1859.0" y2="1087.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1922.0,1048.0 1922.0,1000.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1945.6,1055.9 1945.6,1000.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1945.6,1055.9 1945.6,1063.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1969.3,1000.7 1898.4,1000.7 1898.4,1016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1969.3,1000.7 1969.3,1016.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1969.3" y="1065.6" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SW1</text>
+<line x1="2134.6" y1="1205.5" x2="2134.6" y2="1245.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2110.6" y1="1245.5" x2="2158.6" y2="1245.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="2134.6" y="1257.5" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="1859.0" y1="1166.1" x2="1859.0" y2="1206.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1835.0" y1="1206.1" x2="1883.0" y2="1206.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="1859.0" y="1218.1" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="1709.4,1339.3 1709.4,1465.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1733.0,1339.3 1733.0,1465.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1733.0" y1="1402.3" x2="1780.3" y2="1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1709.4" y1="1402.3" x2="1662.2" y2="1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1772.4" y="1357.0" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C8</text>
+<text x="1740.9" y="1396.3" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">13pF</text>
+<polyline points="1709.4,1575.6 1709.4,1701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1733.0,1575.6 1733.0,1701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1733.0" y1="1638.5" x2="1780.3" y2="1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1709.4" y1="1638.5" x2="1662.2" y2="1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1764.5" y="1593.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C9</text>
+<text x="1740.9" y="1632.5" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">13pF</text>
+<line x1="1622.8" y1="1677.9" x2="1622.8" y2="1717.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1598.8" y1="1717.9" x2="1646.8" y2="1717.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="1622.8" y="1729.9" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="1969.3,1536.2 2063.7,1536.2 2063.7,1504.7 1969.3,1504.7 1969.3,1536.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1985.0,1488.9 2048.0,1488.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="1985.0,1551.9 2048.0,1551.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2016.5" y1="1551.9" x2="2016.5" y2="1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2016.5" y1="1488.9" x2="2016.5" y2="1441.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2079.5" y="1538.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">ZQ1</text>
+<polyline points="1426.0,2079.5 1583.4,2079.5 1583.4,2142.5 1426.0,2142.5 1426.0,2079.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1426.0" y1="2111.0" x2="1386.6" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1583.4" y1="2111.0" x2="1622.8" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1599.2" y="2065.6" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R10</text>
+<text x="1591.3" y="2105.0" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100</text>
+<polyline points="1426.0,1961.4 1583.4,1961.4 1583.4,2024.4 1426.0,2024.4 1426.0,1961.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1426.0" y1="1992.9" x2="1386.6" y2="1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1583.4" y1="1992.9" x2="1622.8" y2="1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1607.1" y="1947.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R9</text>
+<text x="1591.3" y="1986.9" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100</text>
+<polyline points="1276.3,1953.5 1276.3,1796.0 1339.3,1796.0 1339.3,1953.5 1276.3,1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1307.8" y1="1953.5" x2="1307.8" y2="1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1307.8" y1="1796.0" x2="1307.8" y2="1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1355.1" y="1860.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R6</text>
+<text x="1347.2" y="1908.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">4.7k</text>
+<polyline points="1276.3,2307.8 1276.3,2150.4 1339.3,2150.4 1339.3,2307.8 1276.3,2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1307.8" y1="2307.8" x2="1307.8" y2="2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1307.8" y1="2150.4" x2="1307.8" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="1355.1" y="2223.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R7</text>
+<text x="1347.2" y="2270.3" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">4.7k</text>
+<line x1="2922.0" y1="103.1" x2="2882.6" y2="103.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2897.6" y="98.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">3</text>
+<text x="2934.0" y="103.1" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VIN</text>
+<line x1="2922.0" y1="221.2" x2="2882.6" y2="221.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2897.6" y="216.4" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="2934.0" y="221.2" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">GND</text>
+<text x="3071.6" y="120.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">STU</text>
+<polyline points="3055.9,63.7 2922.0,63.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3315.7,63.7 3181.9,63.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3315.7,63.7 3315.7,181.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3181.9,63.7 3181.9,181.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3055.9,63.7 3055.9,181.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2922.0,63.7 2922.0,189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3055.9,63.7 3174.0,63.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3174.0,63.7 3181.9,63.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2922.0,181.8 2922.0,260.6 2922.0,260.6 3315.7,260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3315.7,181.8 3315.7,260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3181.9,181.8 3181.9,260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3055.9,181.8 3055.9,260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3315.7" y1="103.1" x2="3355.1" y2="103.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3340.1" y="98.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">2</text>
+<text x="3303.7" y="103.1" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">VOUT</text>
+<polyline points="2929.9,166.1 3055.9,166.1 2922.0,166.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3244.8" y="42.0" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">DD1</text>
+<polyline points="2504.7,213.3 2630.7,213.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2504.7,189.7 2630.7,189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2567.7" y1="189.7" x2="2567.7" y2="142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2567.7" y1="213.3" x2="2567.7" y2="260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2662.2" y="215.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C6</text>
+<text x="2638.5" y="254.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="2229.1,213.3 2355.1,213.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2229.1,189.7 2355.1,189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2292.1" y1="189.7" x2="2292.1" y2="142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2292.1" y1="213.3" x2="2292.1" y2="260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2339.3,142.5 2339.3,158.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="2331.5,150.4 2347.2,150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="2378.7" y="215.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C2</text>
+<text x="2347.2" y="254.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100µF</text>
+<polyline points="3449.6,213.3 3575.6,213.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3449.6,189.7 3575.6,189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3512.6" y1="189.7" x2="3512.6" y2="142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3512.6" y1="213.3" x2="3512.6" y2="260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3559.8,142.5 3559.8,158.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3551.9,150.4 3567.7,150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3591.3" y="223.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C14</text>
+<text x="3559.8" y="262.5" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100µF</text>
+<polyline points="3725.2,213.3 3851.1,213.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3725.2,189.7 3851.2,189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3788.2" y1="189.7" x2="3788.2" y2="142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3788.2" y1="213.3" x2="3788.2" y2="260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3859.0" y="231.0" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C15</text>
+<text x="3827.5" y="270.3" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="3961.4,213.3 4087.4,213.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3961.4,189.7 4087.4,189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4024.4" y1="189.7" x2="4024.4" y2="142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4024.4" y1="213.3" x2="4024.4" y2="260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4095.2" y="223.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C16</text>
+<text x="4063.7" y="262.5" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="4229.1,339.3 4229.1,181.8 4292.1,181.8 4292.1,339.3 4229.1,339.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4260.6" y1="339.3" x2="4260.6" y2="378.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4260.6" y1="181.8" x2="4260.6" y2="142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4307.8" y="246.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R16</text>
+<text x="4300.0" y="286.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">390</text>
+<polyline points="4292.1,512.6 4229.1,512.6 4260.6,575.6 4292.1,512.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4300.0,575.6 4221.2,575.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4260.6" y1="457.4" x2="4260.6" y2="418.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4260.6" y1="614.9" x2="4260.6" y2="654.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<circle cx="4260.6" cy="536.2" r="78.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4260.6,512.6 4260.6,457.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4260.6,575.6 4260.6,614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4260.6,512.6 4260.6,575.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polygon points="4426.0,402.3 4386.6,425.9 4402.3,441.7" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polygon points="4378.7,355.1 4339.3,378.7 4355.1,394.4" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polyline points="4347.2,386.6 4300.0,433.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4394.5,433.8 4347.2,481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4363.0" y="553.8" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">HL1</text>
+<line x1="4260.6" y1="654.3" x2="4260.6" y2="694.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4236.6" y1="694.3" x2="4284.6" y2="694.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="4260.6" y="706.3" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="4024.4" y1="260.6" x2="4024.4" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4000.4" y1="300.6" x2="4048.4" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="4024.4" y="312.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="3788.2" y1="260.6" x2="3788.2" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3764.2" y1="300.6" x2="3812.2" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3788.2" y="312.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="3512.6" y1="260.6" x2="3512.6" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3488.6" y1="300.6" x2="3536.6" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3512.6" y="312.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="2567.7" y1="260.6" x2="2567.7" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2543.7" y1="300.6" x2="2591.7" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="2567.7" y="312.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="2292.1" y1="260.6" x2="2292.1" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2268.1" y1="300.6" x2="2316.1" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="2292.1" y="312.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="2843.3" y1="260.6" x2="2843.3" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2819.3" y1="300.6" x2="2867.3" y2="300.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="2843.3" y="312.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="520.4,654.3 48.0,654.3 48.0,780.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,733.0 48.0,733.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="693.7" x2="559.8" y2="693.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="772.4" x2="559.8" y2="772.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="260.6" y="632.5" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">Net</text>
+<text x="488.9" y="632.5" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">Pin</text>
+<text x="449.6" y="711.3" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="457.4" y="790.0" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">2</text>
+<polyline points="363.0,575.6 363.0,811.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,811.8 48.0,811.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="48.0,772.4 48.0,811.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,811.8 520.4,575.6 48.0,575.6 48.0,654.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="441.7" y="569.6" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">XS1</text>
+<polyline points="520.4,1166.1 48.0,1166.1 48.0,1292.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,1244.8 48.0,1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="1205.5" x2="559.8" y2="1205.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="1284.2" x2="559.8" y2="1284.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="252.7" y="1144.4" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">Net</text>
+<text x="488.9" y="1144.4" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">Pin</text>
+<text x="457.4" y="1223.1" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="457.4" y="1301.8" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">2</text>
+<polyline points="363.0,1087.4 363.0,1418.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,1323.6 48.0,1323.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="1363.0" x2="559.8" y2="1363.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="1441.7" x2="559.8" y2="1441.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="457.4" y="1380.6" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">3</text>
+<text x="457.4" y="1459.3" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">4</text>
+<polyline points="520.4,1402.3 48.0,1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="363.0,1418.1 363.0,1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,1481.1 48.0,1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,1481.1 520.4,1087.4 48.0,1087.4 48.0,1166.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="48.0,1284.2 48.0,1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="441.7" y="1081.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">XS2</text>
+<polyline points="520.4,2425.9 48.0,2425.9 48.0,2551.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,2504.7 48.0,2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="2465.3" x2="559.8" y2="2465.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="2544.1" x2="559.8" y2="2544.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="252.7" y="2404.2" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">Net</text>
+<text x="488.9" y="2404.2" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">Pin</text>
+<text x="457.4" y="2482.9" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="457.4" y="2561.7" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">2</text>
+<polyline points="363.0,2347.2 363.0,2677.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,2583.4 48.0,2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="2622.8" x2="559.8" y2="2622.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="520.4" y1="2701.5" x2="559.8" y2="2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="457.4" y="2640.4" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">3</text>
+<text x="457.4" y="2719.2" font-size="25.3" text-anchor="end" dominant-baseline="auto" font-weight="normal">4</text>
+<polyline points="520.4,2662.2 48.0,2662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="363.0,2677.9 363.0,2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,2740.9 48.0,2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="520.4,2740.9 520.4,2347.2 48.0,2347.2 48.0,2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="48.0,2544.1 48.0,2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="441.7" y="2341.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">XS3</text>
+<polyline points="5559.8,300.0 6032.3,300.0 6032.3,425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5559.8,378.7 6032.3,378.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5559.8" y1="339.3" x2="5520.4" y2="339.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5559.8" y1="418.1" x2="5520.4" y2="418.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5827.5" y="278.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">Net</text>
+<text x="5591.3" y="278.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">Pin</text>
+<text x="5622.8" y="357.0" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="5622.8" y="435.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">2</text>
+<polyline points="5717.3,221.2 5717.3,551.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5559.8,457.4 6032.3,457.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5559.8" y1="496.8" x2="5520.4" y2="496.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5559.8" y1="575.6" x2="5520.4" y2="575.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5622.8" y="514.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">3</text>
+<text x="5622.8" y="593.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">4</text>
+<polyline points="5559.8,536.2 6032.3,536.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5717.3,551.9 5717.3,614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5559.8,614.9 6032.3,614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5559.8,614.9 5559.8,221.2 6032.3,221.2 6032.3,300.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="6032.3,418.1 6032.3,614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5953.5" y="215.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">XP1</text>
+<line x1="5126.7" y1="1756.7" x2="5048.0" y2="1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="1751.9" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">1</text>
+<text x="5138.7" y="1756.7" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VSUP</text>
+<line x1="5126.7" y1="1835.4" x2="5048.0" y2="1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="1830.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">2</text>
+<text x="5138.7" y="1835.4" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">BASE</text>
+<line x1="5126.7" y1="1914.1" x2="5048.0" y2="1914.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="1909.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">3</text>
+<text x="5138.7" y="1914.1" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">AVDD</text>
+<line x1="5126.7" y1="1992.9" x2="5048.0" y2="1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="1988.1" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">4</text>
+<text x="5138.7" y="1992.9" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VFB</text>
+<line x1="5126.7" y1="2307.8" x2="5048.0" y2="2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="2303.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">5</text>
+<text x="5138.7" y="2307.8" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">AGND</text>
+<line x1="5126.7" y1="2229.1" x2="5048.0" y2="2229.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="2224.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">6</text>
+<text x="5138.7" y="2229.1" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">VBG</text>
+<line x1="5126.7" y1="2071.6" x2="5048.0" y2="2071.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="2066.8" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">7</text>
+<text x="5138.7" y="2071.6" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">INA-</text>
+<line x1="5126.7" y1="2150.4" x2="5048.0" y2="2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5077.9" y="2145.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">8</text>
+<text x="5138.7" y="2150.4" font-size="19.8" text-anchor="start" dominant-baseline="central" font-weight="normal">INA+</text>
+<line x1="5599.2" y1="2307.8" x2="5677.9" y2="2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="2303.0" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">9</text>
+<text x="5587.2" y="2307.8" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">INB-</text>
+<line x1="5599.2" y1="2229.1" x2="5677.9" y2="2229.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="2224.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">10</text>
+<text x="5587.2" y="2229.1" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">INB+</text>
+<line x1="5599.2" y1="1756.7" x2="5677.9" y2="1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="1751.9" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">16</text>
+<text x="5587.2" y="1756.7" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">DVDD</text>
+<line x1="5599.2" y1="1914.1" x2="5677.9" y2="1914.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="1909.3" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">11</text>
+<text x="5587.2" y="1914.1" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">PD_SCK</text>
+<line x1="5599.2" y1="1835.4" x2="5677.9" y2="1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="1830.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">12</text>
+<text x="5587.2" y="1835.4" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">DOUT</text>
+<line x1="5599.2" y1="1992.9" x2="5677.9" y2="1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="1988.1" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">13</text>
+<text x="5587.2" y="1992.9" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">XO</text>
+<line x1="5599.2" y1="2071.6" x2="5677.9" y2="2071.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="2066.8" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">14</text>
+<text x="5587.2" y="2071.6" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">XI</text>
+<line x1="5599.2" y1="2150.4" x2="5677.9" y2="2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5648.0" y="2145.6" font-size="18.8" text-anchor="middle" dominant-baseline="auto" font-weight="normal">15</text>
+<text x="5587.2" y="2150.4" font-size="19.8" text-anchor="end" dominant-baseline="central" font-weight="normal">RATE</text>
+<polyline points="5441.7,1717.3 5284.2,1717.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5323.6" y="1774.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">ADC</text>
+<polyline points="5126.7,1717.3 5126.7,2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5599.2,1717.3 5599.2,2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5126.7,1992.9 5126.7,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5599.2,1992.9 5599.2,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5126.7,2347.2 5599.2,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5126.7,1717.3 5284.2,1717.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5441.7,1717.3 5599.2,1717.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5426.0,1717.3 5426.0,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="5300.0,1717.3 5300.0,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5520.4" y="1711.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">DA1</text>
+<text x="5146.1" y="1968.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">hx711</text>
+<polyline points="5756.7,1528.3 5914.1,1528.3 5914.1,1591.3 5756.7,1591.3 5756.7,1528.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5756.7" y1="1559.8" x2="5717.3" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5914.1" y1="1559.8" x2="5953.5" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5819.6" y="1482.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R12</text>
+<text x="5819.6" y="1522.3" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">20</text>
+<polyline points="5796.0,1803.9 5953.5,1803.9 5953.5,1866.9 5796.0,1866.9 5796.0,1803.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5796.0" y1="1835.4" x2="5756.7" y2="1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5953.5" y1="1835.4" x2="5992.9" y2="1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5851.1" y="1758.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R13</text>
+<text x="5843.3" y="1797.9" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100</text>
+<polyline points="5796.0,1922.0 5953.5,1922.0 5953.5,1985.0 5796.0,1985.0 5796.0,1922.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5796.0" y1="1953.5" x2="5756.6" y2="1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5953.5" y1="1953.5" x2="5992.9" y2="1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5851.1" y="2026.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R14</text>
+<text x="5843.3" y="2065.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100</text>
+<polyline points="4827.5,2378.7 4953.5,2378.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4827.5,2355.1 4953.5,2355.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4890.5" y1="2355.1" x2="4890.5" y2="2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4890.5" y1="2378.7" x2="4890.5" y2="2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4945.6" y="2286.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C10</text>
+<text x="4914.1" y="2333.3" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<polyline points="5520.4,2551.9 5677.9,2551.9 5677.9,2614.9 5520.4,2614.9 5520.4,2551.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5520.4" y1="2583.4" x2="5481.1" y2="2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5677.9" y1="2583.4" x2="5717.3" y2="2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="5567.7" y="2506.6" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R11</text>
+<text x="5583.4" y="2545.9" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0</text>
+<line x1="5756.7" y1="2622.8" x2="5756.7" y2="2662.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5732.7" y1="2662.8" x2="5780.7" y2="2662.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="5756.7" y="2674.8" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="4717.3" y1="1748.8" x2="4717.3" y2="1607.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<circle cx="4696.0" cy="1677.9" r="94.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4717.3,1677.9 4788.2,1677.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4780.3" y1="1677.9" x2="4811.8" y2="1677.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4654.3" y1="1764.5" x2="4654.3" y2="1796.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4654.3" y1="1591.3" x2="4654.3" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4717.3,1622.8 4654.3,1591.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4717.3,1733.0 4654.3,1764.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4677.9,1614.9 4717.3,1622.8 4693.7,1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4772.4" y="1632.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">VT1</text>
+<polyline points="4426.0,2150.4 4426.0,1992.9 4488.9,1992.9 4488.9,2150.4 4426.0,2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4457.4" y1="2150.4" x2="4457.4" y2="2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4457.4" y1="1992.9" x2="4457.4" y2="1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4520.4" y="2049.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R8</text>
+<text x="4488.9" y="2089.2" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">10k</text>
+<polyline points="4221.2,2237.0 4378.7,2237.0 4378.7,2300.0 4221.2,2300.0 4221.2,2237.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4221.2" y1="2268.5" x2="4181.9" y2="2268.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4378.7" y1="2268.5" x2="4418.1" y2="2268.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4284.2" y="2175.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R5</text>
+<text x="4244.8" y="2223.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">6.8k</text>
+<line x1="4181.9" y1="2307.8" x2="4181.9" y2="2347.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4157.9" y1="2347.8" x2="4205.9" y2="2347.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="4181.9" y="2359.8" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">AGND</text>
+<polyline points="4040.1,2103.1 4166.1,2103.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4040.1,2079.5 4166.1,2079.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4103.1" y1="2079.5" x2="4103.1" y2="2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4103.1" y1="2103.1" x2="4103.1" y2="2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4158.2" y="2026.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C1</text>
+<text x="4118.9" y="2065.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">10µF</text>
+<polyline points="4465.3,1496.8 4465.3,1622.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4488.9,1496.8 4488.9,1622.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4488.9" y1="1559.8" x2="4536.2" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4465.3" y1="1559.8" x2="4418.1" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4520.4" y="1498.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C3</text>
+<text x="4496.8" y="1545.9" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">10µF</text>
+<line x1="4378.7" y1="1599.2" x2="4378.7" y2="1639.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4354.7" y1="1639.2" x2="4402.7" y2="1639.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="4378.7" y="1651.2" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">AGND</text>
+<polyline points="4103.1,2473.2 4260.6,2473.2 4260.6,2536.2 4103.1,2536.2 4103.1,2473.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4103.1" y1="2504.7" x2="4063.7" y2="2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4260.6" y1="2504.7" x2="4300.0" y2="2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4252.7" y="2419.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R3</text>
+<text x="4237.0" y="2467.2" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100</text>
+<polyline points="4103.1,2709.4 4260.6,2709.4 4260.6,2772.4 4103.1,2772.4 4103.1,2709.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4103.1" y1="2740.9" x2="4063.7" y2="2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4260.6" y1="2740.9" x2="4300.0" y2="2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4174.0" y="2656.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R4</text>
+<text x="4158.2" y="2703.4" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">100</text>
+<polyline points="4512.6,2654.3 4638.6,2654.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="4512.6,2630.7 4638.6,2630.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4575.6" y1="2630.7" x2="4575.6" y2="2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="4575.6" y1="2654.3" x2="4575.6" y2="2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="4622.8" y="2585.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">C5</text>
+<text x="4583.4" y="2624.7" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">0.1µF</text>
+<line x1="638.6" y1="2544.1" x2="638.6" y2="2584.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="614.6" y1="2584.1" x2="662.6" y2="2584.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="638.6" y="2596.1" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">AGND</text>
+<line x1="677.9" y1="851.1" x2="677.9" y2="891.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="653.9" y1="891.1" x2="701.9" y2="891.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="677.9" y="903.1" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="725.2,1520.4 725.2,1363.0 788.2,1363.0 788.2,1520.4 725.2,1520.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="756.7" y1="1520.4" x2="756.7" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="756.7" y1="1363.0" x2="756.7" y2="1323.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="811.8" y="1435.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R1</text>
+<text x="796.0" y="1475.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">10k</text>
+<line x1="559.8" y1="1520.4" x2="559.8" y2="1560.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="535.8" y1="1560.4" x2="583.8" y2="1560.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="559.8" y="1572.4" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="607.1,1953.5 607.1,1796.0 670.0,1796.0 670.0,1953.5 607.1,1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="638.6" y1="1953.5" x2="638.6" y2="1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="638.6" y1="1796.0" x2="638.6" y2="1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="701.5" y="1860.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R2</text>
+<text x="677.9" y="1908.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">10k</text>
+<line x1="756.7" y1="1520.4" x2="756.7" y2="1560.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="732.7" y1="1560.4" x2="780.7" y2="1560.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="756.7" y="1572.4" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="5363.0" y1="614.9" x2="5363.0" y2="654.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5339.0" y1="654.9" x2="5387.0" y2="654.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="5363.0" y="666.9" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<text x="150.4" y="719.2" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">+5V</text>
+<text x="134.6" y="797.9" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">DGND</text>
+<text x="142.5" y="1231.0" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="134.6" y="2490.8" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">AVDD</text>
+<text x="134.6" y="2569.6" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">AGND</text>
+<text x="150.4" y="2648.3" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">INA-</text>
+<text x="150.4" y="2727.0" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">INA+</text>
+<text x="134.6" y="1309.7" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">SWDIO</text>
+<text x="126.7" y="1388.5" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">SWCLK</text>
+<text x="142.5" y="1467.2" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">DGND</text>
+<text x="5992.9" y="1553.8" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="5992.9" y="1829.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">PB13</text>
+<text x="5992.9" y="1947.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">PB12</text>
+<text x="756.7" y="1199.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="628.5" y="608.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+5V</text>
+<text x="2174.0" y="97.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+5V</text>
+<text x="4260.6" y="97.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="3158.2" y="2577.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SWDIO</text>
+<text x="3158.2" y="2656.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SWCLK</text>
+<text x="1111.0" y="1986.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SCL</text>
+<text x="756.7" y="1278.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SWDIO</text>
+<text x="677.9" y="1750.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SWCLK</text>
+<text x="1111.0" y="2105.0" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SDA</text>
+<text x="5827.5" y="357.0" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">SCL</text>
+<text x="5819.6" y="443.6" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">SDA</text>
+<text x="5819.6" y="522.3" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">+5V</text>
+<text x="5803.9" y="601.1" font-size="29.5" text-anchor="start" dominant-baseline="auto" font-weight="normal">DGND</text>
+<text x="5363.0" y="490.8" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+5V</text>
+<text x="5363.0" y="333.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SCL</text>
+<text x="5363.0" y="412.1" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">SDA</text>
+<text x="711.6" y="1986.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="3158.2" y="1317.6" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">PB13</text>
+<text x="3158.2" y="1238.8" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">PB12</text>
+<text x="1111.0" y="2341.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="1111.0" y="1750.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<text x="1150.4" y="2656.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">+3.3V</text>
+<line x1="1268.5" y1="2819.6" x2="1268.5" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1244.5" y1="2859.6" x2="1292.5" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="1268.5" y="2871.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="1544.1" y1="2819.6" x2="1544.1" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1520.1" y1="2859.6" x2="1568.1" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="1544.1" y="2871.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="1819.7" y1="2819.6" x2="1819.7" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="1795.7" y1="2859.6" x2="1843.7" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="1819.7" y="2871.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="2055.9" y1="2819.6" x2="2055.9" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="2031.9" y1="2859.6" x2="2079.9" y2="2859.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="2055.9" y="2871.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="3315.7" y1="2898.4" x2="3315.7" y2="2938.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3291.7" y1="2938.4" x2="3339.7" y2="2938.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3315.7" y="2950.4" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="5402.3" y1="2662.2" x2="5402.3" y2="2702.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="5378.3" y1="2702.2" x2="5426.3" y2="2702.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="5402.3" y="2714.2" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">AGND</text>
+<text x="638.6" y="2459.3" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">AVDD</text>
+<text x="717.3" y="2656.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">INA-</text>
+<text x="835.4" y="2695.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">INA+</text>
+<text x="3985.0" y="1632.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">AVDD</text>
+<text x="3945.6" y="2498.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">INA-</text>
+<text x="3945.6" y="2734.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">INA+</text>
+<polyline points="3426.0,2284.2 3363.0,2284.2 3394.5,2347.2 3426.0,2284.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3433.8,2347.2 3355.1,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3394.5" y1="2229.1" x2="3394.5" y2="2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3394.5" y1="2386.6" x2="3394.5" y2="2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<circle cx="3394.5" cy="2307.8" r="78.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3394.5,2284.2 3394.5,2229.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3394.5,2347.2 3394.5,2386.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3394.5,2284.2 3394.5,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polygon points="3559.8,2174.0 3520.4,2197.6 3536.2,2213.3" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polygon points="3512.6,2126.7 3473.2,2150.4 3488.9,2166.1" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polyline points="3481.1,2158.2 3433.8,2205.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3528.3,2205.5 3481.1,2252.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3496.8" y="2325.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">HL3</text>
+<polyline points="3740.9,2284.2 3677.9,2284.2 3709.4,2347.2 3740.9,2284.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3748.8,2347.2 3670.0,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3709.4" y1="2229.1" x2="3709.4" y2="2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3709.4" y1="2386.6" x2="3709.4" y2="2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<circle cx="3709.4" cy="2307.8" r="78.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3709.4,2284.2 3709.4,2229.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3709.4,2347.2 3709.4,2386.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3709.4,2284.2 3709.4,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polygon points="3874.8,2174.0 3835.4,2197.6 3851.1,2213.3" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polygon points="3827.5,2126.7 3788.2,2150.4 3803.9,2166.1" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polyline points="3796.0,2158.2 3748.8,2205.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3843.3,2205.5 3796.0,2252.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3811.8" y="2325.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">HL5</text>
+<polyline points="3426.0,1693.7 3363.0,1693.7 3394.5,1756.7 3426.0,1693.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3433.8,1756.7 3355.1,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3394.5" y1="1638.5" x2="3394.5" y2="1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3394.5" y1="1796.0" x2="3394.5" y2="1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<circle cx="3394.5" cy="1717.3" r="78.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3394.5,1693.7 3394.5,1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3394.5,1756.7 3394.5,1796.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3394.5,1693.7 3394.5,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polygon points="3559.8,1583.4 3520.4,1607.0 3536.2,1622.8" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polygon points="3512.6,1536.2 3473.2,1559.8 3488.9,1575.6" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polyline points="3481.1,1567.7 3433.8,1614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3528.3,1614.9 3481.1,1662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3496.8" y="1734.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">HL2</text>
+<polyline points="3740.9,1693.7 3677.9,1693.7 3709.4,1756.7 3740.9,1693.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3748.8,1756.7 3670.0,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3709.4" y1="1638.5" x2="3709.4" y2="1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3709.4" y1="1796.0" x2="3709.4" y2="1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<circle cx="3709.4" cy="1717.3" r="78.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3709.4,1693.7 3709.4,1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3709.4,1756.7 3709.4,1796.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3709.4,1693.7 3709.4,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polygon points="3874.8,1583.4 3835.4,1607.0 3851.1,1622.8" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polygon points="3827.5,1536.2 3788.2,1559.8 3803.9,1575.6" stroke="#1a1a1a" fill="#1a1a1a" stroke-width="0.6"/>
+<polyline points="3796.0,1567.7 3748.8,1614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="3843.3,1614.9 3796.0,1662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3811.8" y="1734.9" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">HL4</text>
+<line x1="3709.4" y1="1796.0" x2="3709.4" y2="1836.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3685.4" y1="1836.0" x2="3733.4" y2="1836.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3709.4" y="1848.0" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="3394.5" y1="1796.0" x2="3394.5" y2="1836.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3370.5" y1="1836.0" x2="3418.5" y2="1836.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3394.5" y="1848.0" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="3394.5" y1="2386.6" x2="3394.5" y2="2426.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3370.5" y1="2426.6" x2="3418.5" y2="2426.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3394.5" y="2438.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<line x1="3709.4" y1="2386.6" x2="3709.4" y2="2426.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3685.4" y1="2426.6" x2="3733.4" y2="2426.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<text x="3709.4" y="2438.6" font-size="22.3" text-anchor="middle" dominant-baseline="hanging" font-weight="normal">DGND</text>
+<polyline points="3315.7,1512.6 3158.2,1512.6 3158.2,1449.6 3315.7,1449.6 3315.7,1512.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3315.7" y1="1481.1" x2="3355.1" y2="1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3158.2" y1="1481.1" x2="3118.9" y2="1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3213.3" y="1404.2" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R17</text>
+<text x="3197.6" y="1443.6" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">270</text>
+<polyline points="3315.7,1591.3 3158.2,1591.3 3158.2,1528.3 3315.7,1528.3 3315.7,1591.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3315.7" y1="1559.8" x2="3355.1" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3158.2" y1="1559.8" x2="3118.9" y2="1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3221.2" y="1632.5" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R19</text>
+<text x="3205.5" y="1671.9" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">270</text>
+<polyline points="3315.7,2063.7 3158.2,2063.7 3158.2,2000.7 3315.7,2000.7 3315.7,2063.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3315.7" y1="2032.2" x2="3355.1" y2="2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3158.2" y1="2032.2" x2="3118.9" y2="2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3213.3" y="1955.4" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R18</text>
+<text x="3197.6" y="1994.8" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">270</text>
+<polyline points="3315.7,2142.5 3158.2,2142.5 3158.2,2079.5 3315.7,2079.5 3315.7,2142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3315.7" y1="2111.0" x2="3355.1" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="3158.2" y1="2111.0" x2="3118.9" y2="2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="3221.2" y="2183.7" font-size="25.3" text-anchor="start" dominant-baseline="auto" font-weight="normal">R20</text>
+<text x="3205.5" y="2223.1" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">270</text>
+<polyline points="607.1,756.7 670.0,756.7 638.6,693.7 607.1,756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="599.2,693.7 677.9,693.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="638.6" y1="811.8" x2="638.6" y2="851.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<line x1="638.6" y1="654.3" x2="638.6" y2="614.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="638.6,756.7 638.6,811.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="638.6,693.7 638.6,654.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<polyline points="638.6,756.7 638.6,693.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+<text x="681.9" y="756.3" font-size="23.8" text-anchor="start" dominant-baseline="auto" font-weight="normal">VD1</text>
+<polyline points="3394.5,3095.2 3276.3,3095.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2016.5,1087.4 2134.6,1087.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1859.0,1087.4 1859.0,1166.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1780.3,1638.5 2016.5,1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2370.8,2504.7 2174.0,2504.7 2174.0,1992.9 1622.8,1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1386.6,1992.9 1307.8,1992.9 1111.0,1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1386.6,2111.0 1307.8,2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1307.8,2111.0 1111.0,2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,2662.2 3315.7,2662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2567.7,103.1 2567.7,142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2567.7,103.1 2882.6,103.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2882.6,221.2 2843.3,221.2 2843.3,260.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5677.9,1559.8 5717.3,1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5717.3,2583.4 5756.7,2583.4 5756.7,2622.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5048.0,1835.4 4811.8,1835.4 4811.8,1677.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5048.0,1559.8 4654.3,1559.8 4536.2,1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5048.0,1914.1 4654.3,1914.1 4654.3,1796.0 4654.3,1796.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4103.1,2150.4 4103.1,2268.5 4181.9,2268.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4418.1,1559.8 4378.7,1559.8 4378.7,1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="559.8,772.4 559.8,851.1 677.9,851.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="559.8,1441.7 559.8,1520.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="638.6,1992.9 835.4,1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5520.4,339.3 5363.0,339.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5520.4,496.8 5363.0,496.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="559.8,1363.0 638.6,1363.0 638.6,1756.7 835.4,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,2583.4 3315.7,2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3276.3,1323.6 3000.8,1323.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2134.6,1205.5 2134.6,1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1268.5,2662.2 1268.5,2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2134.6,1087.4 2134.6,1126.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1307.8,1756.7 1111.0,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1307.8,2347.2 1111.0,2347.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5363.0,418.1 5520.4,418.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3512.6,103.1 3512.6,142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2134.6,1087.4 2331.5,1087.4 2331.5,1244.8 2370.8,1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2252.7,2740.9 2370.8,2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2252.7,2898.4 2252.7,2977.1 2370.8,2977.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2370.8,2583.4 2095.2,2583.4 2095.2,2111.0 1622.8,2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1622.8,1638.5 1662.2,1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2370.8,2662.2 2252.7,2662.2 2252.7,2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2370.8,2819.6 2252.7,2819.6 2252.7,2898.4 2370.8,2898.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2252.7,2740.9 2252.7,2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3040.1,3095.2 3000.8,3095.2 3000.8,2977.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,2898.4 3315.7,2898.4 3315.7,2819.6 3000.8,2819.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3276.3,1244.8 3000.8,1244.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5756.7,1835.4 5677.9,1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5756.7,2229.1 5677.9,2229.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5756.7,2150.4 5677.9,2150.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5048.0,2229.1 4890.5,2229.1 4890.5,2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4890.5,2425.9 4890.5,2465.3 5048.0,2465.3 5048.0,2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5677.9,1756.7 5677.9,1559.8 5048.0,1559.8 5048.0,1756.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5677.9,2071.6 5756.7,2071.6 5756.7,2150.4 5756.7,2229.1 5756.7,2307.8 5677.9,2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1662.2,1402.3 1622.8,1402.3 1622.8,1638.5 1622.8,1677.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5677.9,1914.1 5756.6,1914.1 5756.6,1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5992.9,1835.4 6111.0,1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5481.1,2583.4 5402.3,2583.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="638.6,2544.1 559.8,2544.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="756.7,2465.3 559.8,2465.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4063.7,2740.9 3945.6,2740.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4063.7,2504.7 3945.6,2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="756.7,1520.4 756.7,1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="914.1,2701.5 559.8,2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="796.0,2662.2 559.8,2662.2 559.8,2622.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2016.5,1402.3 1780.3,1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2370.8,1559.8 2213.4,1559.8 2213.4,1402.3 2016.5,1402.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2016.5,1638.5 2370.8,1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2016.5,1638.5 2016.5,1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2016.5,1402.3 2016.5,1441.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4260.6,378.7 4260.6,418.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4575.6,2780.3 4575.6,2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4575.6,2583.4 4575.6,2504.7 4693.7,2504.7 4693.7,2071.6 5048.0,2071.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5048.0,2150.4 4772.4,2150.4 4772.4,2780.3 4575.6,2780.3 4300.0,2780.3 4300.0,2740.9 4300.0,2504.7 4575.6,2504.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4181.9,2307.8 4181.9,2268.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4103.1,1914.1 4103.1,2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2292.1,142.5 2292.1,103.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2567.7,103.1 2292.1,103.1 2174.0,103.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4024.4,103.1 4024.4,142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3355.1,103.1 3512.6,103.1 3788.2,103.1 4024.4,103.1 4260.6,103.1 4260.6,142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3788.2,103.1 3788.2,142.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4418.1,2268.5 4457.4,2268.5 4614.9,2268.5 4614.9,1992.9 5048.0,1992.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4457.4,2268.5 4457.4,2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4457.4,1914.1 4457.4,1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="4654.3,1914.1 4457.4,1914.1 4103.1,1914.1 4103.1,1638.5 3985.0,1638.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1819.7,2662.2 1819.7,2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2055.9,2662.2 2055.9,2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="2252.7,2662.2 2055.9,2662.2 1819.7,2662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1819.7,2662.2 1544.1,2662.2 1268.5,2662.2 1150.4,2662.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="1544.1,2662.2 1544.1,2701.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3709.4,2386.6 3709.4,2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3394.5,2386.6 3394.5,2425.9" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3394.5,1796.0 3394.5,1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3709.4,1796.0 3709.4,1835.4" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,1402.3 3118.9,1402.3 3118.9,1481.1" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,1481.1 3079.5,1481.1 3079.5,1559.8 3118.9,1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3355.1,1481.1 3709.4,1481.1 3709.4,1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3355.1,1559.8 3394.5,1559.8 3394.5,1599.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,2032.2 3118.9,2032.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3000.8,2111.0 3118.9,2111.0" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3355.1,2111.0 3394.5,2111.0 3394.5,2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="3355.1,2032.2 3709.4,2032.2 3709.4,2189.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="756.7,1284.2 756.7,1323.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="874.8,1205.5 559.8,1205.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="559.8,1284.2 756.7,1284.2 874.8,1284.2" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5363.0,614.9 5363.0,575.6 5520.4,575.6" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="6111.0,1559.8 5953.5,1559.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5048.0,2465.3 5402.3,2465.3 5756.7,2465.3 5756.7,2307.8" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5402.3,2662.2 5402.3,2583.4 5402.3,2465.3" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="717.3,614.9 638.6,614.9 559.8,614.9 559.8,693.7" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<polyline points="5992.9,1953.5 6111.0,1953.5" stroke="#1a1a1a" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+<circle cx="638.6" cy="1756.7" r="5" fill="#1a1a1a"/>
+<circle cx="638.6" cy="851.1" r="5" fill="#1a1a1a"/>
+<circle cx="638.6" cy="614.9" r="5" fill="#1a1a1a"/>
+<circle cx="756.7" cy="1284.2" r="5" fill="#1a1a1a"/>
+<circle cx="1268.5" cy="2662.2" r="5" fill="#1a1a1a"/>
+<circle cx="1307.8" cy="2111.0" r="5" fill="#1a1a1a"/>
+<circle cx="1307.8" cy="1992.9" r="5" fill="#1a1a1a"/>
+<circle cx="1544.1" cy="2662.2" r="5" fill="#1a1a1a"/>
+<circle cx="1622.8" cy="1638.5" r="5" fill="#1a1a1a"/>
+<circle cx="1819.7" cy="2662.2" r="5" fill="#1a1a1a"/>
+<circle cx="2016.5" cy="1638.5" r="5" fill="#1a1a1a"/>
+<circle cx="2016.5" cy="1402.3" r="5" fill="#1a1a1a"/>
+<circle cx="2055.9" cy="2662.2" r="5" fill="#1a1a1a"/>
+<circle cx="2134.6" cy="1087.4" r="5" fill="#1a1a1a"/>
+<circle cx="2252.7" cy="2898.4" r="5" fill="#1a1a1a"/>
+<circle cx="2252.7" cy="2819.6" r="5" fill="#1a1a1a"/>
+<circle cx="2252.7" cy="2740.9" r="5" fill="#1a1a1a"/>
+<circle cx="2252.7" cy="2662.2" r="5" fill="#1a1a1a"/>
+<circle cx="2292.1" cy="103.1" r="5" fill="#1a1a1a"/>
+<circle cx="2567.7" cy="103.1" r="5" fill="#1a1a1a"/>
+<circle cx="3315.7" cy="2898.4" r="5" fill="#1a1a1a"/>
+<circle cx="3512.6" cy="103.1" r="5" fill="#1a1a1a"/>
+<circle cx="3788.2" cy="103.1" r="5" fill="#1a1a1a"/>
+<circle cx="4024.4" cy="103.1" r="5" fill="#1a1a1a"/>
+<circle cx="4103.1" cy="1914.1" r="5" fill="#1a1a1a"/>
+<circle cx="4181.9" cy="2268.5" r="5" fill="#1a1a1a"/>
+<circle cx="4300.0" cy="2740.9" r="5" fill="#1a1a1a"/>
+<circle cx="4300.0" cy="2504.7" r="5" fill="#1a1a1a"/>
+<circle cx="4457.4" cy="2268.5" r="5" fill="#1a1a1a"/>
+<circle cx="4457.4" cy="1914.1" r="5" fill="#1a1a1a"/>
+<circle cx="4575.6" cy="2780.3" r="5" fill="#1a1a1a"/>
+<circle cx="4575.6" cy="2504.7" r="5" fill="#1a1a1a"/>
+<circle cx="4654.3" cy="1914.1" r="5" fill="#1a1a1a"/>
+<circle cx="4654.3" cy="1559.8" r="5" fill="#1a1a1a"/>
+<circle cx="5048.0" cy="2465.3" r="5" fill="#1a1a1a"/>
+<circle cx="5048.0" cy="1559.8" r="5" fill="#1a1a1a"/>
+<circle cx="5402.3" cy="2583.4" r="5" fill="#1a1a1a"/>
+<circle cx="5402.3" cy="2465.3" r="5" fill="#1a1a1a"/>
+<circle cx="5677.9" cy="1559.8" r="5" fill="#1a1a1a"/>
+<circle cx="5756.7" cy="2307.8" r="5" fill="#1a1a1a"/>
+<circle cx="5756.7" cy="2229.1" r="5" fill="#1a1a1a"/>
+<circle cx="5756.7" cy="2150.4" r="5" fill="#1a1a1a"/>
+</svg>

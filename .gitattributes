@@ -8,3 +8,4 @@ vendor/** -text
 # Images
 *.png binary
 *.jpg binary
+*.pdf binary
